@@ -1,0 +1,217 @@
+<!--title: Console and model — Traceline-->
+<!--scripts: <script src="assets/console.js"></script>-->
+<section class="hero sub">
+  <div class="wrap">
+    <h1 class="rise">The Traceline console</h1>
+    <p class="lede rise">The workspace you receive after onboarding: live tracking, placement planning, error learning, stress testing and privacy controls in one desktop application.</p>
+    <div class="btn-row rise"><a class="btn" href="#demo">Open the console</a></div>
+  </div>
+</section>
+
+<section class="block" id="demo">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Interactive preview</span><h2 class="rise">Everything runs inside the laptop below.</h2>
+      <p class="muted rise" style="margin-top:18px;max-width:66ch">Pick any item in the sidebar, switch layers on the map, drag the sliders and run the tests. The data is simulated for demonstration; a pilot replaces it with your building. The pause button at the bottom right also freezes the simulation.</p></div>
+    <div class="laptop rise">
+      <div class="lid"><div class="app">
+        <div class="side" role="tablist" aria-label="Console sections">
+          <div class="logo"><img src="assets/logo.svg" alt="">trace<em style="color:var(--signal)">line</em></div>
+          <button role="tab" aria-selected="true" data-tab="live">Live map</button>
+          <button role="tab" aria-selected="false" data-tab="place">Placement</button>
+          <button role="tab" aria-selected="false" data-tab="errmap">Error map</button>
+          <button role="tab" aria-selected="false" data-tab="stress">Stress test</button>
+          <button role="tab" aria-selected="false" data-tab="dev">Devices</button>
+          <button role="tab" aria-selected="false" data-tab="priv">Privacy &amp; access</button>
+        </div>
+        <div class="main">
+
+          <div class="panel on" id="p-live">
+            <h3>Live map</h3>
+            <p class="hint">One tagged wheelchair walks the corridor and enters rooms. Solid rays are trusted anchors, dashed rays are down-weighted.</p>
+            <div class="row2">
+              <canvas class="cv" id="cvLive" width="800" height="480" aria-label="Live tracking map"></canvas>
+              <div class="ctl">
+                <div class="read" id="readout">Starting…</div>
+                <fieldset><legend>Layers</legend>
+                  <label><input type="checkbox" id="lyRays" checked>Anchor trust rays</label>
+                  <label><input type="checkbox" id="lyUnc" checked>Uncertainty circle</label>
+                  <label><input type="checkbox" id="lyCrowd">Crowd zones</label>
+                  <label><input type="checkbox" id="lyPred">Prediction</label>
+                </fieldset>
+                <fieldset><legend>Signal noise <span id="noiseV">0.25 m</span></legend>
+                  <input type="range" id="noise" min="0.05" max="0.6" step="0.05" value="0.25">
+                </fieldset>
+                <fieldset><legend>Anchors on <span id="ancV">8</span> of 8</legend>
+                  <input type="range" id="anc" min="3" max="8" step="1" value="8">
+                </fieldset>
+                <button class="btn ghost" id="emerg" type="button" aria-pressed="false">Emergency mode: off</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="p-place">
+            <h3>Anchor placement optimizer</h3>
+            <p class="hint">Choose how many anchors the budget allows. The optimizer picks positions that give most of the floor a clear view of at least three anchors.</p>
+            <div class="row2">
+              <canvas class="cv" id="cvPlace" width="800" height="480" aria-label="Anchor placement map"></canvas>
+              <div class="ctl">
+                <fieldset><legend>Anchors to place <span id="plN">5</span></legend>
+                  <input type="range" id="plRange" min="4" max="9" step="1" value="5">
+                </fieldset>
+                <button class="btn" id="plRun" type="button">Suggest layout</button>
+                <div class="cmp" id="plCmp"></div>
+                <p class="small" id="plNote" style="margin:0"></p>
+              </div>
+            </div>
+          </div>
+
+          <div class="panel" id="p-errmap">
+            <h3>Self-learning error map</h3>
+            <p class="hint">Cells show average position error. Corrections are learned on one set of paths and checked on another.</p>
+            <div style="margin-bottom:10px"><div class="seg" id="emSeg"><button type="button" aria-pressed="false" data-m="before">Before learning</button><button type="button" aria-pressed="true" data-m="after">After learning</button></div></div>
+            <div class="row2">
+              <canvas class="cv" id="cvErr" width="800" height="480" aria-label="Error heat map"></canvas>
+              <div class="ctl"><div class="read" id="emRead"></div><p class="small" style="margin:0">Darker red means larger error. Walls cause the repeat errors the map learns.</p></div>
+            </div>
+          </div>
+
+          <div class="panel" id="p-stress">
+            <h3>Automatic stress testing</h3>
+            <p class="hint">Random mixes of noise, missing anchors and wall bias, each run against a naive solver and Traceline. A case passes when the error stays under 2.5 m.</p>
+            <button class="btn" id="stRun" type="button">Run 2,000 cases</button>
+            <div id="stOut" style="margin-top:16px"></div>
+          </div>
+
+          <div class="panel" id="p-dev">
+            <h3>Anchor and asset health</h3>
+            <p class="hint">Trust is the live average weight the scorer gives each anchor.</p>
+            <div class="table-wrap mini"><table><thead><tr><th>Anchor</th><th>Position</th><th>Status</th><th>Battery</th><th>Live trust</th></tr></thead><tbody id="devBody"></tbody></table></div>
+            <h3 style="margin-top:20px">Tracked assets</h3>
+            <div class="table-wrap mini"><table><thead><tr><th>Asset</th><th>Type</th><th>Zone</th><th>Priority</th></tr></thead><tbody id="assetBody"></tbody></table></div>
+          </div>
+
+          <div class="panel" id="p-priv">
+            <h3>Privacy &amp; access</h3>
+            <p class="hint">Changes here are written to the audit trail below.</p>
+            <div class="row2">
+              <div>
+                <div class="ctl" style="grid-template-columns:1fr 1fr;gap:16px">
+                  <fieldset><legend>Retention</legend>
+                    <select id="ret"><option>Live only</option><option selected>7 days</option><option>30 days</option></select>
+                  </fieldset>
+                  <fieldset><legend>Tracking-off zone</legend>
+                    <label><input type="checkbox" id="offZone">Hide the staff room (grey area on the live map)</label>
+                  </fieldset>
+                </div>
+                <div class="table-wrap mini" style="margin-top:14px"><table><thead><tr><th>Role</th><th>View live</th><th>Export</th><th>Settings</th></tr></thead><tbody>
+                  <tr><td>Administrator</td><td>Yes</td><td>Yes</td><td>Yes, with MFA</td></tr>
+                  <tr><td>Operator</td><td>Yes</td><td>Yes</td><td>No</td></tr>
+                  <tr><td>Viewer</td><td>Yes</td><td>No</td><td>No</td></tr>
+                </tbody></table></div>
+              </div>
+              <div><div class="small" style="margin-bottom:6px">Audit trail</div><div class="read" id="audit" style="max-height:300px;overflow:auto"></div></div>
+            </div>
+          </div>
+
+        </div>
+      </div></div>
+      <div class="base"></div>
+    </div>
+    <p class="swipe">Swipe sideways to explore the console</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">What you receive</span><h2 class="rise">Ten parts, one console.</h2></div>
+    <div class="table-wrap rise"><table><thead><tr><th>Part</th><th>Where to find it</th></tr></thead><tbody>
+      <tr><td>1. Live tracking map with uncertainty circles</td><td>Live map</td></tr>
+      <tr><td>2. Obstacle-aware recovery and anchor trust rays</td><td>Live map</td></tr>
+      <tr><td>3. Crowd-aware tracking zones</td><td>Live map, Crowd layer</td></tr>
+      <tr><td>4. Predictive positioning through signal gaps</td><td>Live map, Prediction layer</td></tr>
+      <tr><td>5. Emergency tracking mode with priority assets</td><td>Live map, emergency button</td></tr>
+      <tr><td>6. AI anchor placement optimizer</td><td>Placement</td></tr>
+      <tr><td>7. Self-learning error map, validated on separate paths</td><td>Error map</td></tr>
+      <tr><td>8. Automatic stress testing</td><td>Stress test</td></tr>
+      <tr><td>9. Anchor and asset health</td><td>Devices</td></tr>
+      <tr><td>10. Retention, roles, tracking-off zones and audit trail</td><td>Privacy &amp; access</td></tr>
+    </tbody></table></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">How the model works</span><h2 class="rise">From raw readings to a position you can trust.</h2></div>
+    <div class="flow rise">
+      <div><b>Ingest</b>range · RSSI · anchor map</div>
+      <div><b>Qualify</b>score every reading</div>
+      <div><b>Estimate</b>learned model + filter</div>
+      <div><b>Report</b>position · uncertainty · reason</div>
+    </div>
+    <div class="stages">
+      <div class="item rise"><h3><span>1</span>Ingest</h3><p class="muted">Each anchor that hears a tag reports a timestamped range (ultra-wideband time of flight) or signal strength (Bluetooth RSSI). With the surveyed anchor coordinates and the floor plan, the system knows which wall sits between every anchor and every point.</p><p class="small">Works through measurement adapters, so anchor vendors can be mixed.</p></div>
+      <div class="item rise"><h3><span>2</span>Qualify</h3><p class="muted">A radio path that passes through a wall reads longer than the real distance. Each reading therefore gets a trust score from three checks: how far it disagrees with neighbouring anchors, whether the straight path crosses a wall on the plan, and whether it fits recent motion. Low-trust readings are down-weighted rather than thrown away, so a sparse site keeps every clue it has.</p><p class="small">This is why the live map draws solid rays for trusted anchors and dashed rays for down-weighted ones.</p></div>
+      <div class="item rise"><h3><span>3</span>Estimate</h3><p class="muted">A learned model turns the weighted readings into an X–Y position. A temporal filter then blends in motion history, which smooths jitter and lets the track continue when anchors drop out; during a gap the filter predicts forward and the uncertainty grows honestly. Location-specific corrections from the error map are applied last.</p><p class="small">Model family and filter settings are tuned per site during the pilot.</p></div>
+      <div class="item rise"><h3><span>4</span>Report</h3><p class="muted">Every position leaves with an uncertainty radius, a confidence value, the anchors that influenced it and a plain-language reason. Operators read “2 of 8 anchors blocked, track held by motion history” instead of a bare coordinate.</p><p class="small">Reports and events can be exported to your own systems.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">What it uses</span><h2 class="rise">Inputs, model parts and outputs.</h2></div>
+    <div class="io">
+      <div class="rise"><h3>Inputs</h3><dl>
+        <dt>Range</dt><dd>Ultra-wideband time-of-flight distance from each reachable anchor.</dd>
+        <dt>Signal strength</dt><dd>Bluetooth RSSI where UWB is not installed.</dd>
+        <dt>Anchor coordinates</dt><dd>Surveyed X–Y positions and anchor identifiers.</dd>
+        <dt>Floor plan</dt><dd>Walls and doors, used for line-of-sight checks and placement planning.</dd>
+        <dt>Device identifier</dt><dd>A rotating pseudonymous ID, never a name.</dd></dl></div>
+      <div class="rise"><h3>Model parts</h3><dl>
+        <dt>Reading scorer</dt><dd>Estimates how likely each reading is obstructed or biased.</dd>
+        <dt>Position estimator</dt><dd>Learned mapping from trusted readings to X–Y.</dd>
+        <dt>Temporal filter</dt><dd>Uses motion history for stability, prediction and recovery.</dd>
+        <dt>Uncertainty estimate</dt><dd>Produces the radius and confidence shown with every position.</dd>
+        <dt>Error-map corrector</dt><dd>Learns repeat errors by location and checks them on separate trajectories.</dd>
+        <dt>Planner and stress tester</dt><dd>Simulate placements and thousands of noise, dropout and obstruction cases.</dd></dl></div>
+      <div class="rise"><h3>Outputs</h3><dl>
+        <dt>Position</dt><dd>X–Y in metres with zone name.</dd>
+        <dt>Uncertainty</dt><dd>Radius around the estimate, plus confidence.</dd>
+        <dt>Evidence</dt><dd>Anchors used, anchors down-weighted, and the reason in plain language.</dd>
+        <dt>Events</dt><dd>Dropouts, uncertain zones, emergency flags and audit entries.</dd>
+        <dt>Reports</dt><dd>Placement comparison, error-map validation and stress-test findings.</dd></dl></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap split">
+    <div>
+      <span class="kicker rise">Where it is necessary</span>
+      <h2 class="rise">Wherever a few metres change the outcome.</h2>
+      <ul class="checks" style="margin-top:28px">
+        <li class="rise"><strong>Hospitals.</strong> Wheelchairs, pumps and monitors sit in busy corridors behind many walls; finding the right one quickly saves staff minutes, and emergency mode keeps priority assets visible.</li>
+        <li class="rise"><strong>Warehouses.</strong> Metal racking bends signals, so a pallet can appear one aisle away; obstruction scoring and the error map target exactly this.</li>
+        <li class="rise"><strong>Campuses and public buildings.</strong> Large floors with few budgeted anchors need wayfinding and space planning without a dense install.</li>
+        <li class="rise"><strong>Malls.</strong> Crowds change signal quality through the day; crowd-aware zones show where accuracy dips.</li>
+      </ul>
+    </div>
+    <figure class="rise"><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=900&q=70" alt="Warehouse aisles" loading="lazy"><figcaption>Long racked aisles distort signals.</figcaption></figure>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Example output</span><h2 class="rise">One position report.</h2></div>
+<pre class="code rise">{
+  "id": "W-014",           "zone": "Main corridor",
+  "x_m": 21.4,             "y_m": 20.1,
+  "uncertainty_m": 1.6,    "confidence": 0.82,
+  "anchors_used": ["A1","A3","A5","A6","A8"],
+  "anchors_downweighted": ["A2","A4"],
+  "reason": "2 of 8 anchors blocked by walls; track held by motion history"
+}</pre>
+    <blockquote class="rise">Accuracy depends on anchors, noise and obstructions. We report results on hidden test data and confirm them in your building with a surveyed pilot.</blockquote>
+    <div class="btn-row rise"><a class="btn" href="pricing.html#contact">Request a pilot</a><a class="btn ghost" href="pricing.html">View plans</a></div>
+  </div>
+</section>

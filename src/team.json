@@ -1,0 +1,12 @@
+{
+  "teamName": "Team Traceline",
+  "blurb": "A student team building AI indoor positioning that stays accurate when a building can only afford a few anchors.",
+  "institute": "Vishwakarma Institute, Pune",
+  "stage": "Working prototype, 2026",
+  "members": [
+    { "name": "Shree", "role": "Positioning model and data" },
+    { "name": "Member 2", "role": "Console and web frontend" },
+    { "name": "Member 3", "role": "Anchor hardware and firmware" },
+    { "name": "Member 4", "role": "Business case and research" }
+  ]
+}

@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>{{title}}</title>
+<meta name="description" content="AI-based indoor positioning that stays accurate with few anchors, noisy signals and obstructed paths.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <video id="bgvideo" autoplay muted loop playsinline preload="auto" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_105406_16f4600d-7a92-4292-b96e-b19156c7830a.mp4"></video>
+</div>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="34" height="34"><span>trace<em>line</em></span></a>
+    <button class="menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="business.html">Business</a>
+      <a href="pricing.html">Plans</a>
+      <a href="security.html">Security</a>
+      <a href="console.html">Console</a>
+      <a href="pricing.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+{{content}}
+</main>
+
+<section class="closing" aria-label="Traceline">
+  <div class="wrap">
+    <nav class="cl-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="business.html">Business</a>
+      <a href="pricing.html">Plans</a>
+      <a href="security.html">Security</a>
+      <a href="console.html">Console</a>
+      <a href="pricing.html#contact">Contact</a>
+    </nav>
+    <a class="badge" href="index.html" aria-label="Traceline home"><img src="assets/logo.svg" alt="" width="46" height="46"></a>
+  </div>
+  <div class="word rise" role="img" aria-label="traceline">{{wordmark}}</div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="34" height="34"><span>trace<em>line</em></span></a>
+        <p>AI indoor positioning for sparse infrastructure. It estimates where a person or asset is from a few anchors and says how sure it is.</p>
+        <p class="small">{{stage}}</p>
+      </div>
+      <div>
+        <h4>About the team</h4>
+        <p>{{blurb}}</p>
+        <ul>
+          <li><b>{{teamName}}</b></li>
+          <li>{{institute}}</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who builds what</h4>
+        <ul>
+{{members}}
+        </ul>
+      </div>
+    </div>
+    <div class="legal">&copy; 2026 {{teamName}}. Figures and demos on this site are simulated or illustrative until confirmed in a surveyed pilot.</div>
+  </div>
+</footer>
+
+<button class="pause" id="pauseBtn" type="button" aria-pressed="false" aria-label="Pause animation">
+  <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
+  <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
+  <span>Pause animation</span>
+</button>
+
+<script src="assets/app.js"></script>
+{{scripts}}
+</body>
+</html>

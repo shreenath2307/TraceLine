@@ -1,0 +1,97 @@
+<!--title: Indoor positioning for sparse infrastructure — Traceline-->
+<section class="hero">
+  <div class="wrap">
+    <h1 class="rise">Positioning that holds up indoors</h1>
+    <p class="lede rise">Estimate a moving target’s X–Y position from a few fixed anchors, and stay accurate when signals are noisy, missing or blocked.</p>
+    <div class="btn-row rise"><a class="btn" href="pricing.html#contact">Get started</a><a class="btn ghost" href="console.html">Try the console</a></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap split">
+    <div>
+      <span class="kicker rise">The problem</span>
+      <h2 class="rise">Indoor location works well in demos and less well in real buildings.</h2>
+      <p class="rise" style="margin-top:24px">Bluetooth and ultra-wideband can locate people, wheelchairs, infusion pumps and pallets inside a building. In practice, deployments rarely look like the lab: budgets limit how many anchors can be installed, corridors fill with people, and walls bend or block radio paths.</p>
+      <p class="rise">When a measurement passes through a wall, the distance it reports is longer than the real one. A model that trusts every reading will place the target in the wrong room. When an anchor drops out, many systems lose the track entirely.</p>
+    </div>
+    <figure class="rise"><img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=900&q=70" alt="A long hospital corridor" loading="lazy"><figcaption>Hospital corridors are long, obstructed and busy: a typical setting for sparse anchor layouts.</figcaption></figure>
+  </div>
+  <div class="wrap grid g4" style="margin-top:clamp(36px,5vw,64px)">
+    <div class="item rise"><h3>Limited anchors</h3><p>Fewer reference points means less redundancy. One bad reading has a larger effect on the position estimate.</p></div>
+    <div class="item rise"><h3>Noisy signals</h3><p>Range and RSSI values fluctuate with body position, furniture and interference, even when the target is still.</p></div>
+    <div class="item rise"><h3>Non-line-of-sight bias</h3><p>Obstructed paths add a consistent positive error to the measured range, which silently pulls the estimate off course.</p></div>
+    <div class="item rise"><h3>Intermittent data loss</h3><p>Packets drop and anchors briefly disappear. The system has to continue sensibly instead of resetting.</p></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <span class="kicker rise">What we are solving</span>
+    <h2 class="rise">Lowest practical error on unseen data, with limited and unreliable anchors.</h2>
+    <p class="lede rise" style="margin-top:24px">Our solution estimates X–Y position from range and/or signal-strength measurements, operates with a reduced number of reference points, reduces the influence of probable non-line-of-sight readings, uses motion history to improve stability, and reports every position together with an uncertainty value. Accuracy is compared across different anchor densities and noise levels, so a facility can see what it gains from each additional anchor before buying it.</p>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">How it works</span><h2 class="rise">From raw measurements to a confident position.</h2></div>
+    <div class="steps">
+      <div class="item rise"><h3>Ingest</h3><p>Timestamped range/RSSI from whichever anchors are reachable, plus known anchor coordinates.</p></div>
+      <div class="item rise"><h3>Qualify</h3><p>Each reading is scored for likely obstruction or bias, using residuals against neighbouring anchors and recent motion.</p></div>
+      <div class="item rise"><h3>Estimate</h3><p>A learned model combines trusted readings with temporal filtering to produce an X–Y position.</p></div>
+      <div class="item rise"><h3>Report</h3><p>The position is returned with confidence, the anchors that influenced it, and a plain-language reason.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Capabilities</span><h2 class="rise">Seven additions built on top of the core challenge.</h2></div>
+    <div class="grid g2 caps">
+      <div class="item rise"><span class="num">01</span><div><h3>AI anchor placement optimizer<span class="tag">High impact</span></h3><p>Recommends the best locations for fixed anchors to maximize coverage and reduce positioning error. Simulate different placements and compare the results before installation.</p></div></div>
+      <div class="item rise"><span class="num">02</span><div><h3>Obstacle-aware position recovery</h3><p>Detects when walls or obstructions make measurements unreliable, then uses alternative anchors and movement history to recover the location.</p></div></div>
+      <div class="item rise"><span class="num">03</span><div><h3>Crowd-aware tracking</h3><p>Simulates crowded corridors where signal quality deteriorates, identifies crowded zones and shows where tracking accuracy may degrade.</p></div></div>
+      <div class="item rise"><span class="num">04</span><div><h3>Predictive positioning</h3><p>Estimates where a target is likely to move next, helping maintain a stable track during brief signal interruptions.</p></div></div>
+      <div class="item rise"><span class="num">05</span><div><h3>Self-learning error map<span class="tag">High impact</span></h3><p>Records where the system repeatedly makes errors, learns location-specific corrections, then validates them on separate trajectories.</p></div></div>
+      <div class="item rise"><span class="num">06</span><div><h3>Emergency tracking mode</h3><p>Simulates an emergency in a hospital or warehouse, prioritizes reliable tracking of selected assets and flags areas where estimates become uncertain.</p></div></div>
+      <div class="item rise"><span class="num">07</span><div><h3>Automatic stress testing</h3><p>Generates thousands of simulated combinations of noise, missing anchors and obstructions to find the conditions under which the algorithm breaks.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Where it is useful</span><h2 class="rise">Places where a few metres matter.</h2></div>
+    <div class="use">
+      <div class="rise"><figure><img src="https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=70" alt="Warehouse aisles" loading="lazy"><figcaption>Warehouses: locating pallets and forklifts across long aisles</figcaption></figure><p>Locate equipment and staff across long racked aisles where metal shelving distorts signals.</p></div>
+      <div class="rise"><figure><img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&q=70" alt="Modern office interior" loading="lazy"><figcaption>Offices and public buildings: wayfinding and space utilisation</figcaption></figure><p>Support wayfinding and space planning in offices, campuses and public buildings.</p></div>
+      <div class="rise"><figure><img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=800&q=70" alt="Hospital ward" loading="lazy"><figcaption>Hospitals: assets, assistive devices and patients</figcaption></figure><p>Find wheelchairs, pumps and monitors quickly, and guide visitors who need assistance.</p></div>
+    </div>
+    <div class="strip">
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=900&q=70" alt="Network hardware" loading="lazy"><figcaption>Gateways and network hardware</figcaption></figure>
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=900&q=70" alt="Analytics on a laptop" loading="lazy"><figcaption>Error maps and analytics</figcaption></figure>
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1573164713714-d95e436ab8d6?w=900&q=70" alt="Team on site" loading="lazy"><figcaption>Site teams and pilots</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">How we validate</span><h2 class="rise">Built to be judged on hidden data, not on a favourable test set.</h2></div>
+    <ul class="checks">
+      <li class="rise">Synthetic venues with known anchor coordinates, simulated trajectories, controlled noise, packet loss and non-line-of-sight bias.</li>
+      <li class="rise">Evaluation on different paths, noise levels and obstruction patterns from those used in training.</li>
+      <li class="rise">Comparison across infrastructure densities, with the baseline and our method reported side by side.</li>
+      <li class="rise">Stress-test reports that state the assumptions and limits of the method clearly.</li>
+    </ul>
+  </div>
+</section>
+
+<section class="cta-band">
+  <div class="wrap btn-row" style="margin-top:0">
+    <a class="btn" href="console.html">Explore the console</a>
+    <a class="btn ghost" href="business.html">See the business case</a>
+    <a class="btn ghost" href="security.html">How we protect data</a>
+  </div>
+</section>

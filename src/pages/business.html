@@ -1,0 +1,96 @@
+<!--title: Business analysis — Traceline-->
+<section class="hero sub">
+  <div class="wrap">
+    <h1 class="rise">Business analysis</h1>
+    <p class="lede rise">Traceline reduces the number of anchors a site needs for acceptable accuracy, which lowers installation cost and widens the set of buildings where indoor positioning makes economic sense.</p>
+    <div class="btn-row rise"><a class="btn" href="pricing.html">View plans</a></div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Market size</span><h2 class="rise">TAM, SAM and SOM</h2><p class="muted rise" style="margin-top:18px;max-width:64ch">These figures are working estimates for planning and should be replaced with cited market-research values before external use.</p></div>
+    <div class="tam">
+      <div class="rise"><div class="n">≈ US$ 12B</div><div class="l">TAM: global indoor positioning and RTLS spend</div></div>
+      <div class="rise"><div class="n">≈ US$ 1.5B</div><div class="l">SAM: healthcare, warehousing and large commercial sites in India and South-East Asia</div></div>
+      <div class="rise"><div class="n">≈ US$ 20M</div><div class="l">SOM: realistic share in the first three years</div></div>
+    </div>
+    <div class="table-wrap rise">
+      <table>
+        <thead><tr><th>Layer</th><th>Definition</th><th>Basis (to be validated)</th></tr></thead>
+        <tbody>
+          <tr><td>TAM</td><td>All indoor positioning and real-time location systems demand worldwide</td><td>Published industry reports; mid-range estimate</td></tr>
+          <tr><td>SAM</td><td>Sites where sparse, low-cost anchors are the deciding factor: hospitals, warehouses, malls, campuses</td><td>Segment share × regional share</td></tr>
+          <tr><td>SOM</td><td>Sites reachable through pilots and channel partners within three years</td><td>Number of sites × average annual contract</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Outlook</span><h2 class="rise">Where the numbers could go.</h2><p class="muted rise" style="margin-top:18px;max-width:64ch">Charts show illustrative planning scenarios, not measured results; replace with pilot data before external use.</p></div>
+    <div class="charts">
+      <div class="chart rise"><h3>Ramp toward SOM</h3><div class="small">Cumulative contract value, US$ million</div>{{chart:ramp}}</div>
+      <div class="chart rise"><h3>Error against anchor count</h3><div class="small">Position error in metres, lower is better</div>{{chart:err}}<div class="legend"><span><i style="border-color:var(--faint);border-top-style:dashed"></i>Dense-anchor baseline</span><span><i style="border-color:var(--signal)"></i>Traceline</span></div></div>
+      <div class="chart rise"><h3>Revenue mix</h3><div class="small">Share of annual revenue by stream</div>
+        <ul class="mix">
+          <li><div class="row"><span>Per-site subscription</span><b>50%</b></div><div class="track"><div class="fill" style="width:50%"></div></div></li>
+          <li><div class="row"><span>Per-asset tier</span><b>25%</b></div><div class="track"><div class="fill" style="width:25%"></div></div></li>
+          <li><div class="row"><span>Placement and survey</span><b>15%</b></div><div class="track"><div class="fill" style="width:15%"></div></div></li>
+          <li><div class="row"><span>Integration and support</span><b>10%</b></div><div class="track"><div class="fill" style="width:10%"></div></div></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Scalability</span><h2 class="rise">Why the model scales.</h2></div>
+    <div class="grid g3">
+      <div class="item rise"><h3>Software-first</h3><p>The core is an inference service, not custom hardware. It works with commonly available Bluetooth and UWB anchors.</p></div>
+      <div class="item rise"><h3>Lower cost per site</h3><p>Fewer anchors for a given accuracy reduces capital cost and installation time, the two largest barriers to adoption.</p></div>
+      <div class="item rise"><h3>Repeatable onboarding</h3><p>Floor plan upload, anchor survey and calibration walk follow the same steps in every building; the error map then learns the site.</p></div>
+      <div class="item rise"><h3>Edge or cloud</h3><p>Inference can run on a local gateway for latency and privacy, or centrally for multi-site analytics.</p></div>
+      <div class="item rise"><h3>Cumulative advantage</h3><p>Each site adds to our library of obstruction and noise patterns, improving robustness elsewhere.</p></div>
+      <div class="item rise"><h3>Adjacent uses</h3><p>Placement planning and stress testing are valuable on their own to integrators and facility consultants.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Go-to-market</span><h2 class="rise">Phased growth.</h2></div>
+    <div class="steps" style="grid-template-columns:repeat(3,1fr)">
+      <div class="item rise"><h3>Pilot</h3><p>One hospital wing or warehouse zone; measure error against a surveyed reference.</p></div>
+      <div class="item rise"><h3>Site rollout</h3><p>Full-facility deployment with emergency mode and error-map learning.</p></div>
+      <div class="item rise"><h3>Multi-site</h3><p>Chains and groups, integrator partnerships, centralised analytics.</p></div>
+    </div>
+    <div class="strip" style="grid-template-columns:repeat(4,1fr)">
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=900&q=70" alt="Dashboard on a screen" loading="lazy"><figcaption>Operational dashboards help facility managers see the value of accuracy and coverage</figcaption></figure>
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=900&q=70" alt="Planning session" loading="lazy"><figcaption>Planning with facility teams</figcaption></figure>
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?w=900&q=70" alt="Partners meeting" loading="lazy"><figcaption>Integrator partnerships</figcaption></figure>
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?w=900&q=70" alt="Circuit board" loading="lazy"><figcaption>Hardware-neutral adapters</figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">Revenue and risks</span><h2 class="rise">How we earn, and what we watch.</h2></div>
+    <div class="grid g3">
+      <div class="item rise"><h3>Revenue streams</h3><ul class="checks" style="max-width:none;margin-top:10px"><li>Per-site annual subscription</li><li>Per-asset tracking tier</li><li>One-time placement and survey service</li><li>Integration and support</li></ul></div>
+      <div class="item rise"><h3>Key risks</h3><ul class="checks" style="max-width:none;margin-top:10px"><li>Accuracy differs between real venues and simulations; pilots are essential</li><li>Hardware diversity across anchor vendors</li><li>Privacy expectations in healthcare</li></ul></div>
+      <div class="item rise"><h3>Mitigations</h3><ul class="checks" style="max-width:none;margin-top:10px"><li>Pilot with surveyed ground truth</li><li>Vendor-neutral measurement adapters</li><li>Privacy-by-design architecture, see <a href="security.html">Security</a></li></ul></div>
+    </div>
+    <div class="split flip" style="margin-top:clamp(36px,5vw,64px);align-items:center">
+      <div class="chart rise"><h3>Risk map</h3><div class="small">Likelihood against impact</div>{{chart:risk}}</div>
+      <div class="rise"><h3 style="margin-bottom:12px">Key</h3><p class="small">Risks plotted on the map</p>
+        <ul class="risk-key"><li><b>1</b>Accuracy differs between real venues and simulations</li><li><b>2</b>Hardware diversity across anchor vendors</li><li><b>3</b>Privacy expectations in healthcare</li></ul></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta-band"><div class="wrap btn-row" style="margin-top:0"><a class="btn" href="pricing.html">View plans</a></div></section>

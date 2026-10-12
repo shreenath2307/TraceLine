@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#000000">
+<title>Plans and contact — Traceline</title>
+<meta name="description" content="AI-based indoor positioning that stays accurate with few anchors, noisy signals and obstructed paths.">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<div class="bg" aria-hidden="true">
+  <video id="bgvideo" autoplay muted loop playsinline preload="auto" src="https://d8j0ntlcm91z4.cloudfront.net/user_38xzZboKViGWJOttwIXH07lWA1P/hf_20260328_105406_16f4600d-7a92-4292-b96e-b19156c7830a.mp4"></video>
+</div>
+<div class="veil" aria-hidden="true"></div>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="34" height="34"><span>trace<em>line</em></span></a>
+    <button class="menu" aria-expanded="false" aria-controls="links">Menu</button>
+    <nav class="links" id="links" aria-label="Main">
+      <a href="index.html">Home</a>
+      <a href="business.html">Business</a>
+      <a href="pricing.html">Plans</a>
+      <a href="security.html">Security</a>
+      <a href="console.html">Console</a>
+      <a href="pricing.html#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+<section class="hero sub">
+  <div class="wrap">
+    <h1 class="rise">Plans &amp; contact</h1>
+    <p class="lede rise">Prices below are estimates for a typical home-sized site, so you can compare plans quickly. We confirm a quote after understanding your floor plan, anchor count and tracked assets.</p>
+    <div class="btn-row rise"><a class="btn" href="#contact">Send an enquiry</a></div>
+  </div>
+</section>
+
+<section class="block" id="plans">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="kicker rise">Estimated prices</span>
+      <h2 class="rise">Pick your flat size to see the estimate.</h2>
+    </div>
+    <div class="rise">
+      <div class="sizer" id="sizer" role="group" aria-label="Flat size">
+        <button type="button" data-bhk="2" aria-pressed="true">2 BHK</button>
+        <button type="button" data-bhk="3" aria-pressed="false">3 BHK</button>
+      </div>
+      <div class="assume">
+        <span>Assumed area: <b id="a-area">about 900 sq ft</b></span>
+        <span>Sparse layout: <b id="a-anch">4 anchors</b>, <b id="a-tags">2 tags</b></span>
+        <span class="small">A dense layout would use <span id="a-dense">6</span>.</span>
+      </div>
+    </div>
+    <div class="plans">
+      <article class="plan rise">
+        <h3>Pilot</h3>
+        <div class="price" data-bhk-price='{"2":"₹0","3":"₹0"}'>₹0</div>
+        <div class="per">free evaluation</div>
+        <div class="brk" data-bhk-brk='{"2":"Covers all 4 anchors of the flat. Hardware is on loan during the pilot.","3":"Covers 5 of the 6 anchors, so one zone of the flat. Hardware is on loan."}'></div>
+        <ul>
+          <li>One zone, up to 5 anchors</li>
+          <li>Simulation and stress-test report</li>
+          <li>Anchor placement recommendation</li>
+          <li>Support through the enquiry form</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Request a pilot</a>
+      </article>
+      <article class="plan best rise">
+        <h3>Facility <span class="tag">Most chosen</span></h3>
+        <div class="price" data-bhk-price='{"2":"₹29,999","3":"₹44,999"}'>₹29,999</div>
+        <div class="per" data-bhk-sub='{"2":"one-time, then ₹4,999 a year","3":"one-time, then ₹6,999 a year"}'></div>
+        <div class="brk" data-bhk-brk='{"2":"4 anchors, 2 tags, installation and one calibration walk.","3":"6 anchors, 3 tags, installation and one calibration walk."}'></div>
+        <ul>
+          <li>Full floor coverage</li>
+          <li>Obstacle-aware recovery and predictive tracking</li>
+          <li>Self-learning error map</li>
+          <li>Crowd-aware zones and dashboard</li>
+          <li>Business-hours support</li>
+        </ul>
+        <a class="btn" href="#contact">Get a quote</a>
+      </article>
+      <article class="plan rise">
+        <h3>Enterprise</h3>
+        <div class="price" data-bhk-price='{"2":"₹19,999","3":"₹29,999"}'>₹19,999</div>
+        <div class="per" data-bhk-sub='{"2":"per flat, then ₹3,499 a year","3":"per flat, then ₹4,999 a year"}'></div>
+        <div class="brk" data-bhk-brk='{"2":"For 10 or more flats or sites. Shared gateway and dashboard.","3":"For 10 or more flats or sites. Shared gateway and dashboard."}'></div>
+        <ul>
+          <li>Everything in Facility</li>
+          <li>Emergency tracking mode</li>
+          <li>On-premise or private cloud</li>
+          <li>SSO, audit export, custom retention</li>
+          <li>Dedicated support contact</li>
+        </ul>
+        <a class="btn ghost" href="#contact">Talk to us</a>
+      </article>
+    </div>
+    <p class="small rise" style="margin-top:22px;max-width:78ch">Estimates are in Indian rupees, exclusive of GST, and based on the assumed flat above. Larger floor areas, more tracked assets or heavy obstruction raise the anchor count and the price. The Facility estimate is lower than a dense layout because the same accuracy needs fewer anchors.</p>
+  </div>
+</section>
+
+<section class="block" id="contact">
+  <div class="wrap split">
+    <div>
+      <span class="kicker rise">Enquiry</span>
+      <h2 class="rise">Talk to the team.</h2>
+      <form class="enq rise" id="enq" name="enquiry" method="POST" data-netlify="true" netlify-honeypot="bot-field" style="margin-top:28px">
+        <input type="hidden" name="form-name" value="enquiry">
+        <p class="hp"><label>Leave this empty <input name="bot-field" tabindex="-1" autocomplete="off"></label></p>
+        <label>Name<input name="name" required autocomplete="name"></label>
+        <label>Email<input name="email" type="email" required autocomplete="email"></label>
+        <label>Organisation<input name="organisation" autocomplete="organization"></label>
+        <label>Interested in
+          <select name="interest">
+            <option>Pilot</option><option>Facility plan</option><option>Enterprise plan</option><option>Partnership</option><option>Something else</option>
+          </select>
+        </label>
+        <label>Message<textarea name="message" placeholder="Type of building, approximate area, and what you want to track"></textarea></label>
+        <div><button class="btn" type="submit">Send enquiry</button></div>
+        <div id="formNote" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+    <div>
+      <figure class="rise"><img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=70" alt="Team around a table" loading="lazy"><figcaption>The team reads every enquiry and replies to the email you give.</figcaption></figure>
+      <p class="rise" style="margin-top:24px">Tell us the type of building, the approximate area and what you want to track. That is enough for a first estimate.</p>
+    </div>
+  </div>
+</section>
+
+<section class="block">
+  <div class="wrap">
+    <div class="sec-head"><span class="kicker rise">FAQ</span><h2 class="rise">Common questions</h2></div>
+    <div style="max-width:820px">
+      <details class="rise"><summary>How many anchors do I need?</summary><p>It depends on floor area and layout. The placement optimizer simulates options and shows the expected error for each, so you can choose the smallest count that meets your accuracy target.</p></details>
+      <details class="rise"><summary>Which anchor hardware is supported?</summary><p>The method works from range or signal-strength measurements, so it is designed to work with common Bluetooth and UWB anchors through measurement adapters.</p></details>
+      <details class="rise"><summary>What accuracy can I expect?</summary><p>Accuracy varies with anchor density, noise and obstructions. We report results on hidden test data and recommend a surveyed pilot to confirm it in your building.</p></details>
+      <details class="rise"><summary>What happens when a wall blocks the signal?</summary><p>Likely obstructed readings are down-weighted, alternative anchors are used, and motion history helps hold the track. The reported uncertainty increases so you can see it.</p></details>
+      <details class="rise"><summary>Can it run without internet?</summary><p>Yes. Inference can run on a local gateway inside your network.</p></details>
+      <details class="rise"><summary>Is personal data stored?</summary><p>We track devices through pseudonymous identifiers and keep only what is needed. See the <a href="security.html">Security</a> page for details.</p></details>
+      <details class="rise"><summary>How long does a pilot take?</summary><p>Typically a few weeks: survey, anchor setup, calibration walk and a measured comparison.</p></details>
+      <details class="rise"><summary>How were the estimated prices worked out?</summary><p>They assume a 2 BHK of about 900 sq ft with 4 anchors and 2 tags, or a 3 BHK of about 1,350 sq ft with 6 anchors and 3 tags, plus installation, calibration and software. Your quote replaces them once we see your floor plan.</p></details>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<section class="closing" aria-label="Traceline">
+  <div class="wrap">
+    <nav class="cl-links" aria-label="Footer">
+      <a href="index.html">Home</a>
+      <a href="business.html">Business</a>
+      <a href="pricing.html">Plans</a>
+      <a href="security.html">Security</a>
+      <a href="console.html">Console</a>
+      <a href="pricing.html#contact">Contact</a>
+    </nav>
+    <a class="badge" href="index.html" aria-label="Traceline home"><img src="assets/logo.svg" alt="" width="46" height="46"></a>
+  </div>
+  <div class="word rise" role="img" aria-label="traceline"><svg viewBox="0 0 530 70" preserveAspectRatio="xMidYMid meet" aria-hidden="true"><rect x="20" y="0" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.95"/><rect x="20" y="10" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.95"/><rect x="10" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="20" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="30" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="20" y="30" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.85"/><rect x="20" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="20" y="50" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.52"/><rect x="40" y="50" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.52"/><rect x="30" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="60" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="80" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="90" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="60" y="30" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.85"/><rect x="70" y="30" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.85"/><rect x="100" y="30" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.85"/><rect x="60" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="60" y="50" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.52"/><rect x="60" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="130" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="140" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="150" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="160" y="30" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.85"/><rect x="130" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="140" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="150" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="160" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="120" y="50" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.52"/><rect x="160" y="50" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.52"/><rect x="130" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="140" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="150" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="160" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="190" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="200" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="210" y="20" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.92"/><rect x="180" y="30" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.85"/><rect x="180" y="40" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.72"/><rect x="180" y="50" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.52"/><rect x="220" y="50" width="8.4" height="8.4" rx="1" fill="rgb(171,172,185)" opacity="0.52"/><rect x="190" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="200" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="210" y="60" width="8.4" height="8.4" rx="1" fill="rgb(172,172,184)" opacity="0.34"/><rect x="250" y="20" width="8.4" height="8.4" rx="1" fill="rgb(156,178,198)" opacity="0.92"/><rect x="260" y="20" width="8.4" height="8.4" rx="1" fill="rgb(148,181,205)" opacity="0.92"/><rect x="270" y="20" width="8.4" height="8.4" rx="1" fill="rgb(140,184,212)" opacity="0.92"/><rect x="240" y="30" width="8.4" height="8.4" rx="1" fill="rgb(163,175,192)" opacity="0.85"/><rect x="280" y="30" width="8.4" height="8.4" rx="1" fill="rgb(132,187,219)" opacity="0.85"/><rect x="240" y="40" width="8.4" height="8.4" rx="1" fill="rgb(163,175,192)" opacity="0.72"/><rect x="250" y="40" width="8.4" height="8.4" rx="1" fill="rgb(156,178,198)" opacity="0.72"/><rect x="260" y="40" width="8.4" height="8.4" rx="1" fill="rgb(148,181,205)" opacity="0.72"/><rect x="270" y="40" width="8.4" height="8.4" rx="1" fill="rgb(140,184,212)" opacity="0.72"/><rect x="280" y="40" width="8.4" height="8.4" rx="1" fill="rgb(132,187,219)" opacity="0.72"/><rect x="240" y="50" width="8.4" height="8.4" rx="1" fill="rgb(163,175,192)" opacity="0.52"/><rect x="250" y="60" width="8.4" height="8.4" rx="1" fill="rgb(156,178,198)" opacity="0.34"/><rect x="260" y="60" width="8.4" height="8.4" rx="1" fill="rgb(148,181,205)" opacity="0.34"/><rect x="270" y="60" width="8.4" height="8.4" rx="1" fill="rgb(140,184,212)" opacity="0.34"/><rect x="280" y="60" width="8.4" height="8.4" rx="1" fill="rgb(132,187,219)" opacity="0.34"/><rect x="310" y="0" width="8.4" height="8.4" rx="1" fill="rgb(112,194,236)" opacity="0.95"/><rect x="320" y="0" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.95"/><rect x="320" y="10" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.95"/><rect x="320" y="20" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.92"/><rect x="320" y="30" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.85"/><rect x="320" y="40" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.72"/><rect x="320" y="50" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.52"/><rect x="310" y="60" width="8.4" height="8.4" rx="1" fill="rgb(112,194,236)" opacity="0.34"/><rect x="320" y="60" width="8.4" height="8.4" rx="1" fill="rgb(109,196,239)" opacity="0.34"/><rect x="330" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="380" y="0" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.95"/><rect x="370" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="380" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="380" y="30" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.85"/><rect x="380" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="380" y="50" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.52"/><rect x="370" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="380" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="390" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="420" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="440" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="450" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="420" y="30" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.85"/><rect x="430" y="30" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.85"/><rect x="460" y="30" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.85"/><rect x="420" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="460" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="420" y="50" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.52"/><rect x="460" y="50" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.52"/><rect x="420" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="460" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="490" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="500" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="510" y="20" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.92"/><rect x="480" y="30" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.85"/><rect x="520" y="30" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.85"/><rect x="480" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="490" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="500" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="510" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="520" y="40" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.72"/><rect x="480" y="50" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.52"/><rect x="490" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="500" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="510" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/><rect x="520" y="60" width="8.4" height="8.4" rx="1" fill="rgb(108,196,240)" opacity="0.34"/></svg></div>
+</section>
+
+<footer class="foot">
+  <div class="wrap">
+    <div class="top">
+      <div>
+        <a class="brand" href="index.html"><img src="assets/logo.svg" alt="" width="34" height="34"><span>trace<em>line</em></span></a>
+        <p>AI indoor positioning for sparse infrastructure. It estimates where a person or asset is from a few anchors and says how sure it is.</p>
+        <p class="small">Working prototype, 2026</p>
+      </div>
+      <div>
+        <h4>About the team</h4>
+        <p>A student team building AI indoor positioning that stays accurate when a building can only afford a few anchors.</p>
+        <ul>
+          <li><b>Team Traceline</b></li>
+          <li>Vishwakarma Institute, Pune</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Who builds what</h4>
+        <ul>
+          <li><b>Shree</b>: Positioning model and data</li>
+          <li><b>Member 2</b>: Console and web frontend</li>
+          <li><b>Member 3</b>: Anchor hardware and firmware</li>
+          <li><b>Member 4</b>: Business case and research</li>
+        </ul>
+      </div>
+    </div>
+    <div class="legal">&copy; 2026 Team Traceline. Figures and demos on this site are simulated or illustrative until confirmed in a surveyed pilot.</div>
+  </div>
+</footer>
+
+<button class="pause" id="pauseBtn" type="button" aria-pressed="false" aria-label="Pause animation">
+  <svg class="i-pause" viewBox="0 0 16 16" aria-hidden="true"><rect x="3" y="2" width="3.5" height="12" rx="1" fill="currentColor"/><rect x="9.5" y="2" width="3.5" height="12" rx="1" fill="currentColor"/></svg>
+  <svg class="i-play" viewBox="0 0 16 16" aria-hidden="true"><path d="M4 2.5v11l9-5.5z" fill="currentColor"/></svg>
+  <span>Pause animation</span>
+</button>
+
+<script src="assets/app.js"></script>
+
+</body>
+</html>
