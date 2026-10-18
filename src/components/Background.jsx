@@ -3,7 +3,6 @@ import { useAnimation } from "../context/AnimationContext";
 
 export default function Background() {
   const videoRef = useRef(null);
-  const glowRef = useRef(null);
   const { isPaused } = useAnimation();
 
   useEffect(() => {
@@ -17,39 +16,6 @@ export default function Background() {
       }
     }
   }, [isPaused]);
-
-  // Subtle interactive ambient glow that follows mouse
-  useEffect(() => {
-    let frameId;
-    let targetX = window.innerWidth / 2;
-    let targetY = window.innerHeight / 3;
-    let currentX = targetX;
-    let currentY = targetY;
-
-    const handlePointerMove = (e) => {
-      targetX = e.clientX;
-      targetY = e.clientY;
-    };
-
-    const animateGlow = () => {
-      // Smooth lerp
-      currentX += (targetX - currentX) * 0.08;
-      currentY += (targetY - currentY) * 0.08;
-
-      if (glowRef.current) {
-        glowRef.current.style.transform = `translate3d(${currentX - 350}px, ${currentY - 350}px, 0)`;
-      }
-      frameId = requestAnimationFrame(animateGlow);
-    };
-
-    window.addEventListener("pointermove", handlePointerMove, { passive: true });
-    frameId = requestAnimationFrame(animateGlow);
-
-    return () => {
-      window.removeEventListener("pointermove", handlePointerMove);
-      cancelAnimationFrame(frameId);
-    };
-  }, []);
 
   return (
     <>
@@ -65,23 +31,6 @@ export default function Background() {
         />
       </div>
       <div className="bg-glow-radial" aria-hidden="true" />
-      <div
-        ref={glowRef}
-        aria-hidden="true"
-        style={{
-          position: "fixed",
-          top: 0,
-          left: 0,
-          width: "700px",
-          height: "700px",
-          borderRadius: "50%",
-          background: "radial-gradient(circle, rgba(255, 90, 71, 0.16) 0%, rgba(92, 165, 255, 0.10) 40%, transparent 70%)",
-          filter: "blur(40px)",
-          pointerEvents: "none",
-          zIndex: -2,
-          willChange: "transform"
-        }}
-      />
       <div className="bg-veil" aria-hidden="true" />
     </>
   );

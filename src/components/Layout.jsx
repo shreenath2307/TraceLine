@@ -4,6 +4,7 @@ import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Background from "./Background";
 import PauseButton from "./PauseButton";
+import PageGuide from "./PageGuide";
 
 export default function Layout({ children }) {
   const { pathname, hash } = useLocation();
@@ -28,6 +29,7 @@ export default function Layout({ children }) {
       </main>
       <Footer />
       <PauseButton />
+      {pathname !== "/" && <PageGuide />}
     </>
   );
 }

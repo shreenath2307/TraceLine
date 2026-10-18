@@ -96,7 +96,7 @@ export default function Navbar() {
                     padding: "10px 14px",
                     borderRadius: "8px",
                     color: isActive(link.path) ? "var(--signal)" : "var(--text)",
-                    background: isActive(link.path) ? "rgba(255, 90, 71, 0.08)" : "transparent",
+                    background: isActive(link.path) ? "var(--signal-subtle)" : "transparent",
                     fontSize: "17px",
                     fontWeight: 500
                   }}

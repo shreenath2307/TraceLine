@@ -71,7 +71,7 @@ export default function Wordmark() {
             whileInView={{ opacity: d.opacity, scale: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.4, delay: d.delay, ease: "easeOut" }}
-            whileHover={{ scale: 1.4, fill: "#ff5a47", opacity: 1 }}
+            whileHover={{ scale: 1.4, fill: "var(--signal, #7FB2D6)", opacity: 1 }}
           />
         ))}
       </svg>

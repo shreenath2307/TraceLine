@@ -29,7 +29,9 @@ import {
 const S = 20; // 20px per metre
 const W = 40; // 40 metres wide
 const H = 24; // 24 metres high
-const CORAL = "#ff5a47";
+const CORAL = "#7FB2D6";
+const STEEL_BLUE = "#5F8FB3";
+const FONT = '"Source Serif 4", Georgia, serif';
 const OK = "#7ad9a5";
 const INK = "#f2efe9";
 
@@ -319,7 +321,7 @@ export default function ConsolePage() {
     ctx.fillRect(0, 0, W * S, H * S);
 
     // Room labels
-    ctx.font = "12px Hanken Grotesk, sans-serif";
+    ctx.font = "12px " + FONT;
     ctx.fillStyle = "rgba(244,241,235,0.3)";
     ctx.textAlign = "left";
     ROOMS.forEach((r) => {
@@ -346,7 +348,7 @@ export default function ConsolePage() {
     ctx.fillStyle = on ? INK : "#2c2d38";
     ctx.fillRect(a.x * S - 6, a.y * S - 6, 12, 12);
     ctx.fillStyle = on ? "rgba(244,241,235,0.85)" : "#5a5c68";
-    ctx.font = "11px Hanken Grotesk, sans-serif";
+    ctx.font = "11px " + FONT;
     ctx.textAlign = "center";
     ctx.fillText(label || a.id, a.x * S, a.y * S - 10);
   }, []);
@@ -571,24 +573,24 @@ export default function ConsolePage() {
               if (countWallCrossings(gx, gy, a.x, a.y) <= 1 && dist(gx, gy, a.x, a.y) <= 20) reach++;
             });
             if (reach < 3) {
-              ctx.fillStyle = "rgba(255,90,71,0.18)";
+              ctx.fillStyle = "rgba(95,143,179,0.22)";
               ctx.fillRect((gx - 1) * S, (gy - 1) * S, 2 * S, 2 * S);
             }
           }
         }
         ctx.fillStyle = CORAL;
-        ctx.font = "12px Hanken Grotesk, sans-serif";
+        ctx.font = "12px " + FONT;
         ctx.textAlign = "left";
-        ctx.fillText("Emergency active: red cells have <3 reachable anchors", 10, H * S - 12);
+        ctx.fillText("Emergency active: shaded cells have <3 reachable anchors", 10, H * S - 12);
       }
 
       // Crowd zones
       if (layers.crowd) {
         CROWD_ZONES.forEach((r) => {
-          ctx.fillStyle = "rgba(255,180,70,0.14)";
+          ctx.fillStyle = "rgba(95,143,179,0.15)";
           ctx.fillRect(r[0] * S, r[1] * S, (r[2] - r[0]) * S, (r[3] - r[1]) * S);
-          ctx.fillStyle = "rgba(255,180,70,0.85)";
-          ctx.font = "12px Hanken Grotesk, sans-serif";
+          ctx.fillStyle = "rgba(156,196,226,0.92)";
+          ctx.font = "12px " + FONT;
           ctx.textAlign = "left";
           ctx.fillText("Crowded: 2.2x noise", r[0] * S + 8, r[1] * S + 18);
         });
@@ -599,7 +601,7 @@ export default function ConsolePage() {
         ctx.fillStyle = "rgba(120,120,130,0.35)";
         ctx.fillRect(OFF_ZONE[0] * S + 2, OFF_ZONE[1] * S + 2, (OFF_ZONE[2] - OFF_ZONE[0]) * S - 4, (OFF_ZONE[3] - OFF_ZONE[1]) * S - 4);
         ctx.fillStyle = "#bbb";
-        ctx.font = "12px Hanken Grotesk, sans-serif";
+        ctx.font = "12px " + FONT;
         ctx.textAlign = "left";
         ctx.fillText("Tracking Off (Privacy)", OFF_ZONE[0] * S + 8, OFF_ZONE[3] * S - 10);
       }
@@ -622,7 +624,7 @@ export default function ConsolePage() {
           ctx.stroke();
         }
         ctx.fillStyle = pr ? CORAL : "#8e909e";
-        ctx.font = "11px Hanken Grotesk, sans-serif";
+        ctx.font = "11px " + FONT;
         ctx.textAlign = "center";
         ctx.fillText(a.id, a.x * S, a.y * S + 22);
       });
@@ -638,7 +640,7 @@ export default function ConsolePage() {
         // Rays
         if (layers.rays) {
           sim.st.rays.forEach((r) => {
-            ctx.strokeStyle = r.trusted ? "rgba(122,217,165,0.75)" : "rgba(255,90,71,0.85)";
+            ctx.strokeStyle = r.trusted ? "rgba(122,217,165,0.75)" : "rgba(127,178,214,0.85)";
             ctx.lineWidth = 1.4;
             ctx.setLineDash(r.trusted ? [] : [5, 5]);
             ctx.beginPath();
@@ -661,8 +663,8 @@ export default function ConsolePage() {
 
         // Uncertainty
         if (layers.uncertainty) {
-          ctx.fillStyle = "rgba(255,90,71,0.14)";
-          ctx.strokeStyle = "rgba(255,90,71,0.75)";
+          ctx.fillStyle = "rgba(127,178,214,0.14)";
+          ctx.strokeStyle = "rgba(127,178,214,0.75)";
           ctx.lineWidth = 1.5;
           ctx.beginPath();
           ctx.arc(sim.st.x * S, sim.st.y * S, sim.st.unc * S, 0, Math.PI * 2);
@@ -691,7 +693,7 @@ export default function ConsolePage() {
             });
             const lastPt = sim.st.forecast[sim.st.forecast.length - 1];
             ctx.fillStyle = OK;
-            ctx.font = "600 11px Hanken Grotesk, sans-serif";
+            ctx.font = "600 11px " + FONT;
             ctx.textAlign = "left";
             ctx.fillText("+5s Neural Arc", lastPt.x_m * S + 8, lastPt.y_m * S + 4);
           } else {
@@ -709,7 +711,7 @@ export default function ConsolePage() {
             ctx.arc(fx * S, fy * S, 6, 0, Math.PI * 2);
             ctx.stroke();
             ctx.fillStyle = INK;
-            ctx.font = "11px Hanken Grotesk, sans-serif";
+            ctx.font = "11px " + FONT;
             ctx.textAlign = "left";
             ctx.fillText("+2s vector", fx * S + 10, fy * S + 4);
           }
@@ -722,7 +724,7 @@ export default function ConsolePage() {
         ctx.lineWidth = 1;
         ctx.strokeRect(10, 10, modelEngine === "onnx" ? 230 : 160, 26);
         ctx.fillStyle = modelEngine === "onnx" ? OK : "#7a7c88";
-        ctx.font = "600 11px JetBrains Mono, monospace";
+        ctx.font = "600 11px " + FONT;
         ctx.textAlign = "left";
         ctx.fillText(
           modelEngine === "onnx"
@@ -745,7 +747,7 @@ export default function ConsolePage() {
         ctx.fill();
 
         ctx.fillStyle = INK;
-        ctx.font = "600 12px Hanken Grotesk, sans-serif";
+        ctx.font = "600 12px " + FONT;
         ctx.textAlign = "left";
         ctx.fillText("W-014", sim.st.x * S + 12, sim.st.y * S - 10);
       }
@@ -850,7 +852,7 @@ export default function ConsolePage() {
       const ctx = canvas.getContext("2d");
       drawFloor(ctx);
       samples.forEach((s, i) => {
-        ctx.fillStyle = counts[i] >= 3 ? "rgba(122,217,165,0.14)" : "rgba(255,90,71,0.16)";
+        ctx.fillStyle = counts[i] >= 3 ? "rgba(122,217,165,0.14)" : "rgba(95,143,179,0.18)";
         ctx.fillRect((s[0] - 1) * S, (s[1] - 1) * S, 2 * S, 2 * S);
       });
       base.forEach((p) => {
@@ -864,9 +866,9 @@ export default function ConsolePage() {
         ctx.fillRect(p[0] * S - 6, p[1] * S - 6, 12, 12);
       });
       ctx.fillStyle = "rgba(244,241,235,0.75)";
-      ctx.font = "12px Hanken Grotesk, sans-serif";
+      ctx.font = "12px " + FONT;
       ctx.textAlign = "left";
-      ctx.fillText("Solid coral: suggested   Outlined grey: baseline edges   Green tint: >=3 anchors reach", 10, H * S - 12);
+      ctx.fillText("Sky blue: suggested   Outlined grey: baseline edges   Green tint: >=3 anchors reach", 10, H * S - 12);
     }
   }, [placeCount, drawFloor, drawAnchor]);
 
@@ -927,10 +929,10 @@ export default function ConsolePage() {
       cells.forEach((cell) => {
         const v = errMapMode === "before" ? cell.before : cell.after;
         const t = clamp(v / 3, 0, 1);
-        ctx.fillStyle = `rgba(255,90,71,${(0.08 + t * 0.75).toFixed(2)})`;
+        ctx.fillStyle = `rgba(127,178,214,${(0.08 + t * 0.75).toFixed(2)})`;
         ctx.fillRect(cell.x * S + 1, cell.y * S + 1, 2 * S - 2, 2 * S - 2);
         ctx.fillStyle = "rgba(244,241,235,0.78)";
-        ctx.font = "11px Hanken Grotesk, sans-serif";
+        ctx.font = "11px " + FONT;
         ctx.textAlign = "center";
         ctx.fillText(v.toFixed(1), cell.x * S + S, cell.y * S + S + 4);
       });
@@ -1023,7 +1025,7 @@ export default function ConsolePage() {
                 <span className="traffic-light yellow" />
                 <span className="traffic-light green" />
               </div>
-              <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", color: "var(--faint)", fontFamily: "var(--mono)" }}>
+              <div style={{ display: "flex", alignItems: "center", gap: "8px", fontSize: "12px", color: "var(--faint)", fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>
                 <span>traceline-v2.6-edge</span>
                 <span>•</span>
                 <span style={{ color: emergencyMode ? "var(--signal)" : "var(--ok)" }}>
@@ -1042,7 +1044,7 @@ export default function ConsolePage() {
                 </div>
 
                 <button
-                  className={`console-nav-btn ${activeTab === "live" ? "active" : ""}`}
+                  data-guide="tab-live" className={`console-nav-btn ${activeTab === "live" ? "active" : ""}`}
                   onClick={() => { setActiveTab("live"); addAuditLog("viewer opened live map"); }}
                 >
                   <Activity size={18} />
@@ -1050,7 +1052,7 @@ export default function ConsolePage() {
                 </button>
 
                 <button
-                  className={`console-nav-btn ${activeTab === "place" ? "active" : ""}`}
+                  data-guide="tab-place" className={`console-nav-btn ${activeTab === "place" ? "active" : ""}`}
                   onClick={() => { setActiveTab("place"); addAuditLog("operator navigated to placement optimizer"); }}
                 >
                   <MapPin size={18} />
@@ -1058,7 +1060,7 @@ export default function ConsolePage() {
                 </button>
 
                 <button
-                  className={`console-nav-btn ${activeTab === "errmap" ? "active" : ""}`}
+                  data-guide="tab-errmap" className={`console-nav-btn ${activeTab === "errmap" ? "active" : ""}`}
                   onClick={() => { setActiveTab("errmap"); addAuditLog("operator opened error heatmap"); }}
                 >
                   <Flame size={18} />
@@ -1066,7 +1068,7 @@ export default function ConsolePage() {
                 </button>
 
                 <button
-                  className={`console-nav-btn ${activeTab === "stress" ? "active" : ""}`}
+                  data-guide="tab-stress" className={`console-nav-btn ${activeTab === "stress" ? "active" : ""}`}
                   onClick={() => { setActiveTab("stress"); addAuditLog("operator opened stress test tab"); }}
                 >
                   <AlertTriangle size={18} />
@@ -1074,7 +1076,7 @@ export default function ConsolePage() {
                 </button>
 
                 <button
-                  className={`console-nav-btn ${activeTab === "dev" ? "active" : ""}`}
+                  data-guide="tab-dev" className={`console-nav-btn ${activeTab === "dev" ? "active" : ""}`}
                   onClick={() => { setActiveTab("dev"); addAuditLog("viewer checked hardware devices & assets"); }}
                 >
                   <Cpu size={18} />
@@ -1099,13 +1101,13 @@ export default function ConsolePage() {
               </div>
 
               {/* Main Panel Content */}
-              <div className="console-main">
+              <div className="console-main" data-guide="console-workspace">
                 {/* 1. LIVE MAP */}
                 {activeTab === "live" && (
                   <div>
                     <h3>Live indoor map</h3>
                     <p className="console-hint">
-                      Wheelchair <b>W-014</b> maneuvers along corridors and enters rooms. Solid green rays indicate trusted line-of-sight anchors; dashed coral rays are down-weighted due to wall obstruction.
+                      Wheelchair <b>W-014</b> maneuvers along corridors and enters rooms. Solid green rays indicate trusted line-of-sight anchors; dashed sky blue rays are down-weighted due to wall obstruction.
                     </p>
 
                     <div className="console-grid-2">
@@ -1165,7 +1167,7 @@ export default function ConsolePage() {
                               Gauss-Newton
                             </button>
                           </div>
-                          <div style={{ fontSize: "10px", color: "var(--faint)", marginTop: "6px", fontFamily: "var(--mono)" }}>
+                          <div style={{ fontSize: "10px", color: "var(--faint)", marginTop: "6px", fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>
                             {modelEngine === "onnx"
                               ? `Active: 162KB ONNX Model ? ${modelLatency.toFixed(1)}ms (WASM)`
                               : "Active: Iterative WLS (no temporal memory)"}
@@ -1486,7 +1488,7 @@ export default function ConsolePage() {
                                   </span>
                                 </td>
                                 <td>{batt}%</td>
-                                <td style={{ fontFamily: "var(--mono)", color: tr > 0.5 ? "var(--ok)" : "var(--signal)" }}>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums", color: tr > 0.5 ? "var(--ok)" : "var(--signal)" }}>
                                   {isOn ? tr.toFixed(2) : "—"}
                                 </td>
                               </tr>
@@ -1602,7 +1604,7 @@ export default function ConsolePage() {
                         padding: "16px",
                         borderRadius: "8px",
                         border: "1px solid var(--line)",
-                        fontFamily: "var(--mono)",
+                        fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums",
                         fontSize: "13px",
                         color: "var(--muted)",
                         lineHeight: 1.7,
@@ -1656,24 +1658,24 @@ export default function ConsolePage() {
                     <div className="grid g4" style={{ gap: "16px", marginBottom: "24px" }}>
                       <div className="card">
                         <div style={{ fontSize: "12px", color: "var(--faint)", marginBottom: "4px" }}>Model Graph Payload</div>
-                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--text)", fontFamily: "var(--mono)" }}>162.6 KB</div>
+                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--text)", fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>162.6 KB</div>
                         <div style={{ fontSize: "11px", color: "var(--ok)", marginTop: "4px" }}>Target &lt; 15 MB (98.9% under budget)</div>
                       </div>
                       <div className="card">
                         <div style={{ fontSize: "12px", color: "var(--faint)", marginBottom: "4px" }}>In-Browser Inference</div>
-                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--ok)", fontFamily: "var(--mono)" }}>
+                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--ok)", fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>
                           {modelLatency.toFixed(1)} ms
                         </div>
                         <div style={{ fontSize: "11px", color: "var(--ok)", marginTop: "4px" }}>Target &lt; 50 ms (27x faster)</div>
                       </div>
                       <div className="card">
                         <div style={{ fontSize: "12px", color: "var(--faint)", marginBottom: "4px" }}>Recurrent State Memory</div>
-                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--blue)", fontFamily: "var(--mono)" }}>64 floats</div>
+                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--blue)", fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>64 floats</div>
                         <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "4px" }}>GRU temporal motion filter</div>
                       </div>
                       <div className="card">
                         <div style={{ fontSize: "12px", color: "var(--faint)", marginBottom: "4px" }}>Forecast Horizon</div>
-                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--signal)", fontFamily: "var(--mono)" }}>10 Steps</div>
+                        <div style={{ fontSize: "24px", fontWeight: 700, color: "var(--signal)", fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>10 Steps</div>
                         <div style={{ fontSize: "11px", color: "var(--muted)", marginTop: "4px" }}>+5.0s predicted kinematic arc</div>
                       </div>
                     </div>
@@ -1739,13 +1741,13 @@ export default function ConsolePage() {
                             <tbody>
                               <tr>
                                 <td><b>Cold Load Time (Model + WASM Runtime)</b></td>
-                                <td style={{ fontFamily: "var(--mono)" }}>{benchmarkResult.coldLoadMs.toFixed(1)} ms</td>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>{benchmarkResult.coldLoadMs.toFixed(1)} ms</td>
                                 <td>&lt; 500 ms</td>
                                 <td><span className="tag ok">PASS</span></td>
                               </tr>
                               <tr>
                                 <td><b>Warm Inference Latency (Median / p50)</b></td>
-                                <td style={{ fontFamily: "var(--mono)", color: "var(--ok)", fontWeight: 600 }}>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums", color: "var(--ok)", fontWeight: 600 }}>
                                   {benchmarkResult.p50Ms.toFixed(2)} ms
                                 </td>
                                 <td>&le; 50.0 ms</td>
@@ -1753,13 +1755,13 @@ export default function ConsolePage() {
                               </tr>
                               <tr>
                                 <td><b>95th Percentile Latency (p95)</b></td>
-                                <td style={{ fontFamily: "var(--mono)" }}>{benchmarkResult.p95Ms.toFixed(2)} ms</td>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>{benchmarkResult.p95Ms.toFixed(2)} ms</td>
                                 <td>&le; 100.0 ms</td>
                                 <td><span className="tag ok">PASS</span></td>
                               </tr>
                               <tr>
                                 <td><b>Model Payload File Size</b></td>
-                                <td style={{ fontFamily: "var(--mono)" }}>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>
                                   {(benchmarkResult.modelSizeBytes / 1024).toFixed(1)} KB
                                 </td>
                                 <td>&le; 15.0 MB</td>
@@ -1808,11 +1810,11 @@ export default function ConsolePage() {
                             return (
                               <tr key={a.id}>
                                 <td><b>{a.id}</b></td>
-                                <td style={{ fontFamily: "var(--mono)" }}>{a.x.toFixed(1)}m, {a.y.toFixed(1)}m</td>
-                                <td style={{ fontFamily: "var(--mono)" }}>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>{a.x.toFixed(1)}m, {a.y.toFixed(1)}m</td>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>
                                   {isOn ? `${(dist(telemetry.x, telemetry.y, a.x, a.y) + (isDown ? 1.6 : 0)).toFixed(2)} m` : "?"}
                                 </td>
-                                <td style={{ fontFamily: "var(--mono)" }}>
+                                <td style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums" }}>
                                   {isOn ? `${(-52 - 18 * Math.log10(Math.max(1, dist(telemetry.x, telemetry.y, a.x, a.y))) - (isDown ? 14 : 0)).toFixed(0)} dBm` : "?"}
                                 </td>
                                 <td>
@@ -1826,7 +1828,7 @@ export default function ConsolePage() {
                                         }}
                                       />
                                     </div>
-                                    <span style={{ fontFamily: "var(--mono)", fontSize: "12px", color: isDown ? "var(--signal)" : "var(--ok)" }}>
+                                    <span style={{ fontFamily: "var(--font)", fontVariantNumeric: "tabular-nums", fontSize: "12px", color: isDown ? "var(--signal)" : "var(--ok)" }}>
                                       {(prob * 100).toFixed(0)}%
                                     </span>
                                   </div>

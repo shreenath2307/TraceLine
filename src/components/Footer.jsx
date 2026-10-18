@@ -17,7 +17,7 @@ export default function Footer() {
             <Link to="/pricing#contact" className="small muted">Contact</Link>
           </nav>
           <Link to="/" aria-label="Traceline home">
-            <img src="/logo.svg" alt="" width={42} height={42} style={{ filter: "drop-shadow(0 0 12px rgba(255, 90, 71, 0.4))" }} />
+            <img src="/logo.svg" alt="" width={42} height={42} style={{ filter: "drop-shadow(0 0 8px var(--signal-glow))" }} />
           </Link>
         </div>
         <Wordmark />
