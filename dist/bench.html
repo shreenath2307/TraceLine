@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><title>Traceline browser benchmark</title>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<style>body{font:16px system-ui;margin:24px;max-width:760px}pre{background:#f4f4f4;padding:12px;overflow:auto}button{font-size:16px;padding:8px 14px}</style></head>
+<body>
+<h1>Traceline browser benchmark</h1>
+<p>Serve this folder (<code>python -m http.server 8000</code>), open <code>http://localhost:8000/bench.html</code> in Chrome or Edge,
+press Run, and paste the JSON into <code>reports/benchmark_browser_&lt;browser&gt;.json</code>. Loads ONNX Runtime Web from a CDN on first load
+(first-load internet dependency; vendor the files for a fully offline demo).</p>
+<button id="run">Run benchmark</button>
+<pre id="out">not run yet</pre>
+<script type="module">
+import * as ort from "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.30.0/dist/ort.min.mjs";
+import { TracelineInfer } from "./infer.js";
+ort.env.wasm.wasmPaths = "https://cdn.jsdelivr.net/npm/onnxruntime-web@1.30.0/dist/";
+document.getElementById("run").onclick = async () => {
+  const out = document.getElementById("out"); out.textContent = "running...";
+  const meta = await (await fetch("model_meta.json")).json();
+  const bytes = await (await fetch("model.onnx")).arrayBuffer();
+  const t0 = performance.now();
+  const t = await TracelineInfer.create({ ort, meta, modelBytes: new Uint8Array(bytes) });
+  const cold = performance.now() - t0;
+  const anchors = Array.from({ length: 6 }, (_, i) => ({ anchor_id: i, x_m: 5 + 8 * i, y_m: 3 + 4 * (i % 3), range_m: 10 + 2 * i, rssi_dbm: -60 - i }));
+  for (let i = 0; i < 50; i++) await t.step({ anchors });
+  const lat = [];
+  t.reset();
+  for (let i = 0; i < 1000; i++) { const s = performance.now(); await t.step({ anchors }); lat.push(performance.now() - s); }
+  lat.sort((a, b) => a - b);
+  const res = { environment: navigator.userAgent, model_size_bytes: bytes.byteLength, cold_load_ms: cold,
+    warm_latency_ms: { median: lat[500], p95: lat[950], max: lat[999] }, steps: 1000,
+    targets: { median_ms: 50, p95_ms: 100, size_bytes: 15 * 1024 * 1024 } };
+  res.meets_targets = res.warm_latency_ms.median <= 50 && res.warm_latency_ms.p95 <= 100 && res.model_size_bytes <= res.targets.size_bytes;
+  out.textContent = JSON.stringify(res, null, 2);
+};
+</script></body></html>
