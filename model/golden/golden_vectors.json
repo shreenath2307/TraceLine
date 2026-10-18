@@ -1,0 +1,4441 @@
+{
+ "schema": "traceline-golden-1.0",
+ "sequences": [
+  {
+   "name": "normal_run_from_reset",
+   "run_id": "hospital-dev-0003",
+   "venue": {
+    "width_m": 50.0,
+    "height_m": 30.0
+   },
+   "tolerance": 0.001,
+   "steps": [
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 32.731,
+       "rssi_dbm": -71.6
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 23.723,
+       "rssi_dbm": -62.3
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 14.662,
+       "rssi_dbm": -64.7
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 8.301,
+       "rssi_dbm": -62.6
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 12.228,
+       "rssi_dbm": -60.3
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 20.854,
+       "rssi_dbm": -63.4
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.68097686767578,
+       21.55679702758789
+      ],
+      "sigma": 1.8727591037750244,
+      "nlos_prob": [
+       0.302232950925827,
+       0.7215396761894226,
+       0.33962395787239075,
+       0.03766694292426109,
+       0.8327451944351196,
+       0.7602726817131042,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10284819453954697,
+       0.15207594633102417,
+       0.19800303876399994,
+       0.23198409378528595,
+       0.14787554740905762,
+       0.09708859771490097,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.70849609375,
+       21.52682113647461,
+       34.696346282958984,
+       21.546571731567383,
+       34.68474578857422,
+       21.582956314086914,
+       34.701053619384766,
+       21.611637115478516,
+       34.676979064941406,
+       21.605512619018555,
+       34.67344284057617,
+       21.618207931518555,
+       34.661643981933594,
+       21.59899139404297,
+       34.701881408691406,
+       21.59674072265625,
+       34.72404098510742,
+       21.576704025268555,
+       34.72953796386719,
+       21.557558059692383
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS",
+       "HIGH_UNCERTAINTY"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.10). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.72; measured range is 2.3 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.20). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.83; measured range is 2.2 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.76; measured range is 2.2 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history. Uncertainty is high (about 1.9 m)."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 33.793,
+       "rssi_dbm": -67.1
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 23.863,
+       "rssi_dbm": -69.9
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 15.552,
+       "rssi_dbm": -63.1
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 7.159,
+       "rssi_dbm": -59.6
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 12.568,
+       "rssi_dbm": -55.6
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 21.582,
+       "rssi_dbm": -68.1
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       35.32783126831055,
+       22.197490692138672
+      ],
+      "sigma": 1.403060793876648,
+      "nlos_prob": [
+       0.2831619083881378,
+       0.8348577618598938,
+       0.9051764607429504,
+       0.025450585409998894,
+       0.9276552200317383,
+       0.8807740211486816,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.06392509490251541,
+       0.08197842538356781,
+       0.09394765645265579,
+       0.1771763563156128,
+       0.06502024084329605,
+       0.06252827495336533,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       35.410552978515625,
+       22.133392333984375,
+       35.45664596557617,
+       22.153837203979492,
+       35.485313415527344,
+       22.16891098022461,
+       35.51089096069336,
+       22.173858642578125,
+       35.53012466430664,
+       22.160173416137695,
+       35.52449035644531,
+       22.1435546875,
+       35.52035903930664,
+       22.114768981933594,
+       35.518985748291016,
+       22.09373664855957,
+       35.523372650146484,
+       22.079776763916016,
+       35.512481689453125,
+       22.049156188964844
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "NLOS_SUSPECTED:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.83; measured range is 1.7 m longer than the distance to the estimate). Anchor 2 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 2.4 m longer than the distance to the estimate). Anchor 3 down-weighted, low reliability weight (0.18). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.93; measured range is 2.1 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.88; measured range is 2.7 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 24.529,
+       "rssi_dbm": -69.7
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 0.978,
+       "rssi_dbm": -55.1
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 10.344,
+       "rssi_dbm": -63.3
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 20.382,
+       "rssi_dbm": -64.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.29006576538086,
+       22.244258880615234
+      ],
+      "sigma": 1.4012720584869385,
+      "nlos_prob": [
+       0.0,
+       0.912608802318573,
+       0.0,
+       0.00028897455194965005,
+       0.28243932127952576,
+       0.8705337643623352,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.09173842519521713,
+       0.0,
+       0.019999999552965164,
+       0.15513908863067627,
+       0.0856165811419487,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.46791076660156,
+       22.23114013671875,
+       36.6688117980957,
+       22.270063400268555,
+       36.84990692138672,
+       22.306110382080078,
+       37.01952362060547,
+       22.334264755249023,
+       37.1566047668457,
+       22.327760696411133,
+       37.2916259765625,
+       22.325328826904297,
+       37.396697998046875,
+       22.30536651611328,
+       37.52752685546875,
+       22.313568115234375,
+       37.63245391845703,
+       22.286073684692383,
+       37.69956588745117,
+       22.255830764770508
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       1,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "NLOS_SUSPECTED:1",
+       "MISSING_READING:2",
+       "LOW_WEIGHT:3",
+       "LOW_WEIGHT:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 1.4 m longer than the distance to the estimate). Anchor 2 reading missing. Anchor 3 down-weighted, low reliability weight (0.02). Anchor 6 down-weighted, low reliability weight (0.16). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.87; measured range is 1.9 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 34.701,
+       "rssi_dbm": -66.3
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 26.221,
+       "rssi_dbm": -72.2
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 13.419,
+       "rssi_dbm": -58.7
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 5.799,
+       "rssi_dbm": -52.2
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 11.378,
+       "rssi_dbm": -61.2
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 19.835,
+       "rssi_dbm": -67.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.40128707885742,
+       22.24161148071289
+      ],
+      "sigma": 0.8990841507911682,
+      "nlos_prob": [
+       0.3034111559391022,
+       0.931594729423523,
+       0.2077716588973999,
+       0.013806618750095367,
+       0.6175243854522705,
+       0.834982693195343,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.07901015877723694,
+       0.049196045845746994,
+       0.15144704282283783,
+       0.21785999834537506,
+       0.10457391291856766,
+       0.0655655637383461,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.65791320800781,
+       22.192859649658203,
+       36.88051223754883,
+       22.19659996032715,
+       37.10261154174805,
+       22.193906784057617,
+       37.305198669433594,
+       22.181631088256836,
+       37.4872932434082,
+       22.17097282409668,
+       37.64425277709961,
+       22.14783477783203,
+       37.79447555541992,
+       22.121511459350586,
+       37.944580078125,
+       22.10426139831543,
+       38.06332015991211,
+       22.0806884765625,
+       38.16197204589844,
+       22.05474281311035
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.08). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.93; measured range is 3.0 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.15). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.62; measured range is 0.2 m shorter than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.83; measured range is 1.5 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 36.922,
+       "rssi_dbm": -70.6
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 24.423,
+       "rssi_dbm": -66.9
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 14.118,
+       "rssi_dbm": -62.4
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 6.164,
+       "rssi_dbm": -56.2
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 13.182,
+       "rssi_dbm": -59.8
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 21.978,
+       "rssi_dbm": -67.7
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.80344772338867,
+       22.657596588134766
+      ],
+      "sigma": 0.7898109555244446,
+      "nlos_prob": [
+       0.7814626097679138,
+       0.7468138337135315,
+       0.1890910118818283,
+       0.010788378305733204,
+       0.911982536315918,
+       0.9362084269523621,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.04022997245192528,
+       0.06453137844800949,
+       0.08800867199897766,
+       0.13778945803642273,
+       0.05368887260556221,
+       0.03963640704751015,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       37.10641860961914,
+       22.59096908569336,
+       37.37405776977539,
+       22.570077896118164,
+       37.635826110839844,
+       22.5557918548584,
+       37.87339782714844,
+       22.527585983276367,
+       38.095176696777344,
+       22.51185417175293,
+       38.28711700439453,
+       22.482751846313477,
+       38.472896575927734,
+       22.45366859436035,
+       38.64305877685547,
+       22.414274215698242,
+       38.78577423095703,
+       22.401084899902344,
+       38.90805435180664,
+       22.371286392211914
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "NLOS_SUSPECTED:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, likely obstructed (NLOS probability 0.78; measured range is 2.0 m longer than the distance to the estimate). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.75; measured range is 0.7 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.09). Anchor 3 down-weighted, low reliability weight (0.14). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 1.3 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.94; measured range is 3.4 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 33.051,
+       "rssi_dbm": -67.5
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 24.319,
+       "rssi_dbm": -68.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 12.258,
+       "rssi_dbm": -61.6
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 4.822,
+       "rssi_dbm": -55.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 10.577,
+       "rssi_dbm": -61.2
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 19.013,
+       "rssi_dbm": -65.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.13984680175781,
+       21.964609146118164
+      ],
+      "sigma": 0.9366328120231628,
+      "nlos_prob": [
+       0.20135356485843658,
+       0.7832408547401428,
+       0.1874340921640396,
+       0.006005542818456888,
+       0.41567185521125793,
+       0.7949822545051575,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10647058486938477,
+       0.2391657680273056,
+       0.09903358668088913,
+       0.22401775419712067,
+       0.17905156314373016,
+       0.1668141931295395,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.29290771484375,
+       21.955886840820312,
+       36.412479400634766,
+       21.894620895385742,
+       36.546539306640625,
+       21.857967376708984,
+       36.65396499633789,
+       21.824228286743164,
+       36.76356506347656,
+       21.784526824951172,
+       36.86052322387695,
+       21.77082633972168,
+       36.94894027709961,
+       21.756593704223633,
+       37.034934997558594,
+       21.719160079956055,
+       37.11565017700195,
+       21.70125389099121,
+       37.16518020629883,
+       21.66792869567871
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.11). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.78; measured range is 1.4 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.10). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.42; measured range is 0.7 m shorter than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.79; measured range is 0.8 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 30.077,
+       "rssi_dbm": -74.0
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 20.088,
+       "rssi_dbm": -66.3
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 12.018,
+       "rssi_dbm": -64.6
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 3.994,
+       "rssi_dbm": -53.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 12.665,
+       "rssi_dbm": -55.9
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 19.682,
+       "rssi_dbm": -68.3
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       35.06425094604492,
+       20.72068977355957
+      ],
+      "sigma": 1.1373937129974365,
+      "nlos_prob": [
+       0.16488687694072723,
+       0.30852776765823364,
+       0.16402564942836761,
+       0.0043577286414802074,
+       0.9671003222465515,
+       0.8837515711784363,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.019999999552965164,
+       0.08424010127782822,
+       0.2165580689907074,
+       0.29499146342277527,
+       0.27146202325820923,
+       0.24803678691387177,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.97842025756836,
+       20.690710067749023,
+       34.82872009277344,
+       20.607168197631836,
+       34.706302642822266,
+       20.553218841552734,
+       34.57944869995117,
+       20.51473617553711,
+       34.45586013793945,
+       20.458328247070312,
+       34.33016586303711,
+       20.4399356842041,
+       34.217681884765625,
+       20.42720603942871,
+       34.114013671875,
+       20.39295196533203,
+       34.01947021484375,
+       20.37295913696289,
+       33.89949417114258,
+       20.337265014648438
+      ],
+      "used_anchor_ids": [
+       2,
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "LOW_WEIGHT:1",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.02). Anchor 1 down-weighted, low reliability weight (0.08). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.97; measured range is 2.1 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.88; measured range is 1.9 m longer than the distance to the estimate). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 31.161,
+       "rssi_dbm": -66.8
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 23.075,
+       "rssi_dbm": -67.7
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 11.995,
+       "rssi_dbm": -58.4
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.99,
+       "rssi_dbm": -51.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 11.795,
+       "rssi_dbm": -60.6
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 18.318,
+       "rssi_dbm": -67.2
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       35.315895080566406,
+       20.300556182861328
+      ],
+      "sigma": 0.6740186214447021,
+      "nlos_prob": [
+       0.14885766804218292,
+       0.8878995776176453,
+       0.2521305978298187,
+       0.0007020586635917425,
+       0.885661244392395,
+       0.66888427734375,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.055707067251205444,
+       0.10931412875652313,
+       0.19761888682842255,
+       0.0569474920630455,
+       0.12321986258029938,
+       0.08247468620538712,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       35.15334701538086,
+       20.19430160522461,
+       34.9791145324707,
+       20.10424041748047,
+       34.807769775390625,
+       20.033889770507812,
+       34.627037048339844,
+       19.988412857055664,
+       34.44376754760742,
+       19.935720443725586,
+       34.2643928527832,
+       19.894697189331055,
+       34.06621551513672,
+       19.863571166992188,
+       33.90563201904297,
+       19.839162826538086,
+       33.71944046020508,
+       19.81212043762207,
+       33.525230407714844,
+       19.7948055267334
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.89; measured range is 1.3 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.20). Anchor 3 down-weighted, low reliability weight (0.06). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.89; measured range is 0.8 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.67; measured range is 1.0 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 31.647,
+       "rssi_dbm": -69.7
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 21.178,
+       "rssi_dbm": -61.2
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 10.472,
+       "rssi_dbm": -58.6
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 2.03,
+       "rssi_dbm": -43.2
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.859,
+       "rssi_dbm": -56.3
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.924,
+       "rssi_dbm": -62.8
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.77714920043945,
+       18.441335678100586
+      ],
+      "sigma": 0.7180229425430298,
+      "nlos_prob": [
+       0.2009122669696808,
+       0.5958603620529175,
+       0.09778592735528946,
+       0.0019056112505495548,
+       0.988933801651001,
+       0.32429689168930054,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.06225932389497757,
+       0.14800259470939636,
+       0.19649575650691986,
+       0.17372016608715057,
+       0.0375121645629406,
+       0.07478394359350204,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.504329681396484,
+       18.39988136291504,
+       34.20366668701172,
+       18.254152297973633,
+       33.930908203125,
+       18.149808883666992,
+       33.645103454589844,
+       18.085769653320312,
+       33.35943603515625,
+       18.020610809326172,
+       33.08990478515625,
+       17.99034309387207,
+       32.80651092529297,
+       17.978593826293945,
+       32.55486297607422,
+       17.957738876342773,
+       32.29031753540039,
+       17.936607360839844,
+       32.013633728027344,
+       17.926986694335938
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "LOW_WEIGHT:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.60; measured range is 0.3 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.20). Anchor 3 down-weighted, low reliability weight (0.17). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.99; measured range is 3.6 m longer than the distance to the estimate). Anchor 7 down-weighted, low reliability weight (0.07). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 36.364,
+       "rssi_dbm": -65.7
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 20.573,
+       "rssi_dbm": -59.1
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 8.814,
+       "rssi_dbm": -61.3
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.86,
+       "rssi_dbm": -42.8
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 13.373,
+       "rssi_dbm": -59.3
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 16.83,
+       "rssi_dbm": -62.8
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.39247512817383,
+       17.51156997680664
+      ],
+      "sigma": 0.5336730480194092,
+      "nlos_prob": [
+       0.9638835191726685,
+       0.5629974603652954,
+       0.038737937808036804,
+       0.001408422365784645,
+       0.9597825407981873,
+       0.7516115307807922,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.019999999552965164,
+       0.05561753734946251,
+       0.03451120853424072,
+       0.1352699249982834,
+       0.03895609825849533,
+       0.040220875293016434,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.081336975097656,
+       17.392181396484375,
+       33.74187088012695,
+       17.227554321289062,
+       33.40999221801758,
+       17.11285400390625,
+       33.07564926147461,
+       17.038410186767578,
+       32.742977142333984,
+       16.96368408203125,
+       32.410701751708984,
+       16.919788360595703,
+       32.06912612915039,
+       16.896291732788086,
+       31.752042770385742,
+       16.87163543701172,
+       31.418996810913086,
+       16.85187530517578,
+       31.08403968811035,
+       16.844234466552734
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "NLOS_SUSPECTED:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, likely obstructed (NLOS probability 0.96; measured range is 4.8 m longer than the distance to the estimate). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.56; measured range is 0.1 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.03). Anchor 3 down-weighted, low reliability weight (0.14). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.96; measured range is 2.0 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.75; measured range is 1.2 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 30.821,
+       "rssi_dbm": -73.0
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 19.52,
+       "rssi_dbm": -66.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 9.208,
+       "rssi_dbm": -63.0
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.591,
+       "rssi_dbm": -38.8
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.479,
+       "rssi_dbm": -60.8
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.633,
+       "rssi_dbm": -65.3
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       33.95840072631836,
+       16.351089477539062
+      ],
+      "sigma": 0.5161513090133667,
+      "nlos_prob": [
+       0.18785499036312103,
+       0.34692811965942383,
+       0.05872039124369621,
+       0.0028765914030373096,
+       0.9771550297737122,
+       0.4882628619670868,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.05093180760741234,
+       0.10745805501937866,
+       0.16873179376125336,
+       0.2644866704940796,
+       0.05142804607748985,
+       0.09383829683065414,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       33.56575012207031,
+       16.230621337890625,
+       33.156463623046875,
+       16.0620059967041,
+       32.76053237915039,
+       15.949324607849121,
+       32.35795593261719,
+       15.882877349853516,
+       31.9611759185791,
+       15.804178237915039,
+       31.572513580322266,
+       15.773175239562988,
+       31.172727584838867,
+       15.756982803344727,
+       30.790307998657227,
+       15.735430717468262,
+       30.404888153076172,
+       15.72579288482666,
+       30.01160430908203,
+       15.713704109191895
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "LOW_WEIGHT:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.05). Anchor 1 down-weighted, low reliability weight (0.11). Anchor 2 down-weighted, low reliability weight (0.17). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.98; measured range is 2.7 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.49; measured range is 0.5 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 33.4,
+       "rssi_dbm": -71.3
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 22.511,
+       "rssi_dbm": -64.1
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 11.301,
+       "rssi_dbm": -62.4
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 0.462,
+       "rssi_dbm": -40.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 6.621,
+       "rssi_dbm": -57.7
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 17.077,
+       "rssi_dbm": -60.1
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.48220443725586,
+       18.243608474731445
+      ],
+      "sigma": 0.5434381365776062,
+      "nlos_prob": [
+       0.7956410050392151,
+       0.9579476714134216,
+       0.5646271705627441,
+       0.00010935914906440303,
+       0.038320355117321014,
+       0.9221055507659912,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.04207920283079147,
+       0.04372856020927429,
+       0.12561994791030884,
+       0.0660955160856247,
+       0.019999999552965164,
+       0.04259588196873665,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.17791748046875,
+       17.969358444213867,
+       33.87049102783203,
+       17.911828994750977,
+       33.52304458618164,
+       17.888896942138672,
+       33.19649124145508,
+       17.872331619262695,
+       32.83958053588867,
+       17.827436447143555,
+       32.499855041503906,
+       17.796659469604492,
+       32.1228141784668,
+       17.753402709960938,
+       31.768096923828125,
+       17.73126983642578,
+       31.40631103515625,
+       17.710248947143555,
+       31.031368255615234,
+       17.685548782348633
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "NLOS_SUSPECTED:0",
+       "NLOS_SUSPECTED:1",
+       "NLOS_SUSPECTED:2",
+       "LOW_WEIGHT:3",
+       "LOW_WEIGHT:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, likely obstructed (NLOS probability 0.80; measured range is 1.6 m longer than the distance to the estimate). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.96; measured range is 1.9 m longer than the distance to the estimate). Anchor 2 down-weighted, likely obstructed (NLOS probability 0.56; measured range is 0.9 m longer than the distance to the estimate). Anchor 3 down-weighted, low reliability weight (0.07). Anchor 6 down-weighted, low reliability weight (0.02). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.92; measured range is 0.9 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 31.72,
+       "rssi_dbm": -67.6
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 22.108,
+       "rssi_dbm": -60.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 9.749,
+       "rssi_dbm": -58.8
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.393,
+       "rssi_dbm": -39.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.637,
+       "rssi_dbm": -63.1
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.826,
+       "rssi_dbm": -59.6
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.30599594116211,
+       17.00395965576172
+      ],
+      "sigma": 0.581644594669342,
+      "nlos_prob": [
+       0.2503191828727722,
+       0.9340097904205322,
+       0.07705269753932953,
+       0.001392060425132513,
+       0.9717956185340881,
+       0.5918726921081543,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.056155893951654434,
+       0.06067201495170593,
+       0.15118035674095154,
+       0.15103937685489655,
+       0.031144041568040848,
+       0.050745245069265366,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       33.96619415283203,
+       16.930458068847656,
+       33.627647399902344,
+       16.837032318115234,
+       33.29713439941406,
+       16.7840576171875,
+       32.96022415161133,
+       16.75172233581543,
+       32.6186637878418,
+       16.714033126831055,
+       32.285491943359375,
+       16.699111938476562,
+       31.938364028930664,
+       16.688241958618164,
+       31.60769271850586,
+       16.686540603637695,
+       31.263032913208008,
+       16.669214248657227,
+       30.911714553833008,
+       16.671653747558594
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.93; measured range is 1.8 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.15). Anchor 3 down-weighted, low reliability weight (0.15). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.97; measured range is 3.0 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.59; measured range is 0.5 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 32.187,
+       "rssi_dbm": -74.7
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 21.005,
+       "rssi_dbm": -65.9
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 9.661,
+       "rssi_dbm": -60.2
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.92,
+       "rssi_dbm": -42.8
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.781,
+       "rssi_dbm": -63.1
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.049,
+       "rssi_dbm": -62.4
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.308101654052734,
+       16.06179428100586
+      ],
+      "sigma": 0.5059370994567871,
+      "nlos_prob": [
+       0.39918646216392517,
+       0.7117124795913696,
+       0.08526112139225006,
+       0.0024682364892214537,
+       0.9663198590278625,
+       0.4049678146839142,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.04761301353573799,
+       0.0986766368150711,
+       0.16684970259666443,
+       0.18534742295742035,
+       0.037400294095277786,
+       0.060644857585430145,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.03263473510742,
+       15.951349258422852,
+       33.77313995361328,
+       15.837747573852539,
+       33.505191802978516,
+       15.765740394592285,
+       33.233795166015625,
+       15.735796928405762,
+       32.94501876831055,
+       15.682886123657227,
+       32.66560745239258,
+       15.669046401977539,
+       32.36034393310547,
+       15.656177520751953,
+       32.060340881347656,
+       15.652494430541992,
+       31.752063751220703,
+       15.644187927246094,
+       31.4267578125,
+       15.631768226623535
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.05). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.71; measured range is 0.7 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.17). Anchor 3 down-weighted, low reliability weight (0.19). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.97; measured range is 2.5 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.40; measured range is 0.4 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    }
+   ]
+  },
+  {
+   "name": "three_anchors_only",
+   "run_id": "hospital-dev-0000",
+   "venue": {
+    "width_m": 50.0,
+    "height_m": 30.0
+   },
+   "tolerance": 0.001,
+   "steps": [
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 16.963,
+       "rssi_dbm": -68.2
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 4.876,
+       "rssi_dbm": -54.7
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       20.31661605834961,
+       13.969687461853027
+      ],
+      "sigma": 1.5199397802352905,
+      "nlos_prob": [
+       0.24536803364753723,
+       0.0,
+       0.010820628143846989,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.12398278713226318,
+       0.0,
+       0.32687997817993164,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       20.36833381652832,
+       13.998466491699219,
+       20.370954513549805,
+       14.026026725769043,
+       20.370391845703125,
+       14.0699462890625,
+       20.389698028564453,
+       14.108176231384277,
+       20.385875701904297,
+       14.125646591186523,
+       20.398683547973633,
+       14.145731925964355,
+       20.396324157714844,
+       14.154830932617188,
+       20.438770294189453,
+       14.151020050048828,
+       20.4724178314209,
+       14.156630516052246,
+       20.477937698364258,
+       14.1567964553833
+      ],
+      "used_anchor_ids": [
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "MISSING_READING:1",
+       "FEW_ANCHORS",
+       "HIGH_UNCERTAINTY"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.12). Anchor 1 reading missing. Only 1 trusted anchor(s); estimate relies partly on motion history. Uncertainty is high (about 1.5 m)."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 17.184,
+       "rssi_dbm": -68.0
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 5.837,
+       "rssi_dbm": -57.2
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       20.31505012512207,
+       14.184649467468262
+      ],
+      "sigma": 1.236594796180725,
+      "nlos_prob": [
+       0.22177654504776,
+       0.01897921785712242,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.1675719916820526,
+       0.37840667366981506,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       20.297292709350586,
+       14.240497589111328,
+       20.25392723083496,
+       14.294672012329102,
+       20.230690002441406,
+       14.329472541809082,
+       20.204927444458008,
+       14.37006664276123,
+       20.185035705566406,
+       14.393288612365723,
+       20.1660213470459,
+       14.409906387329102,
+       20.147438049316406,
+       14.429283142089844,
+       20.161006927490234,
+       14.434102058410645,
+       20.168773651123047,
+       14.441436767578125,
+       20.160812377929688,
+       14.43882942199707
+      ],
+      "used_anchor_ids": [
+       1
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "MISSING_READING:2",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.17). Anchor 2 reading missing. Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 16.541,
+       "rssi_dbm": -65.7
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 5.261,
+       "rssi_dbm": -49.1
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.258,
+       "rssi_dbm": -55.2
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.56578826904297,
+       14.532068252563477
+      ],
+      "sigma": 0.9546779990196228,
+      "nlos_prob": [
+       0.17341166734695435,
+       0.024435793980956078,
+       0.01821010746061802,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10617189109325409,
+       0.40365180373191833,
+       0.3259414732456207,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.432880401611328,
+       14.544363021850586,
+       19.246549606323242,
+       14.582588195800781,
+       19.098220825195312,
+       14.59790325164795,
+       18.947729110717773,
+       14.62352180480957,
+       18.8190860748291,
+       14.633224487304688,
+       18.691072463989258,
+       14.641629219055176,
+       18.56915283203125,
+       14.654983520507812,
+       18.48082733154297,
+       14.652108192443848,
+       18.39345932006836,
+       14.655782699584961,
+       18.302188873291016,
+       14.65396499633789
+      ],
+      "used_anchor_ids": [
+       1,
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.11). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 5.841,
+       "rssi_dbm": -57.7
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.543603897094727,
+       14.714550018310547
+      ],
+      "sigma": 0.7571790218353271,
+      "nlos_prob": [
+       0.0,
+       0.014402058906853199,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.14229992032051086,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.385107040405273,
+       14.747817993164062,
+       19.194499969482422,
+       14.780760765075684,
+       19.042648315429688,
+       14.79089641571045,
+       18.87917137145996,
+       14.816529273986816,
+       18.743803024291992,
+       14.836799621582031,
+       18.61181640625,
+       14.8488187789917,
+       18.469390869140625,
+       14.877960205078125,
+       18.37882423400879,
+       14.885668754577637,
+       18.271867752075195,
+       14.897342681884766,
+       18.15890884399414,
+       14.911689758300781
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       1
+      ],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "LOW_WEIGHT:1",
+       "MISSING_READING:2",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 down-weighted, low reliability weight (0.14). Anchor 2 reading missing. Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 16.528,
+       "rssi_dbm": -64.1
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 6.335,
+       "rssi_dbm": -58.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.579,
+       "rssi_dbm": -53.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.566556930541992,
+       14.343110084533691
+      ],
+      "sigma": 0.8170117139816284,
+      "nlos_prob": [
+       0.20122306048870087,
+       0.05074061080813408,
+       0.015893476083874702,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10941781848669052,
+       0.21723604202270508,
+       0.2777066230773926,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.419950485229492,
+       14.387282371520996,
+       19.25326919555664,
+       14.392313957214355,
+       19.113082885742188,
+       14.401836395263672,
+       18.972213745117188,
+       14.420114517211914,
+       18.844839096069336,
+       14.438899040222168,
+       18.721681594848633,
+       14.457074165344238,
+       18.593290328979492,
+       14.491158485412598,
+       18.505897521972656,
+       14.502333641052246,
+       18.403888702392578,
+       14.514519691467285,
+       18.290300369262695,
+       14.533285140991211
+      ],
+      "used_anchor_ids": [
+       1,
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.11). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 5.961,
+       "rssi_dbm": -50.5
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.479511260986328,
+       14.517074584960938
+      ],
+      "sigma": 0.6842431426048279,
+      "nlos_prob": [
+       0.0,
+       0.051989201456308365,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.17668555676937103,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.32464027404785,
+       14.533624649047852,
+       19.168838500976562,
+       14.541812896728516,
+       19.037113189697266,
+       14.550390243530273,
+       18.898012161254883,
+       14.573918342590332,
+       18.776134490966797,
+       14.579828262329102,
+       18.660968780517578,
+       14.60721492767334,
+       18.533119201660156,
+       14.635441780090332,
+       18.438215255737305,
+       14.650638580322266,
+       18.33748435974121,
+       14.667089462280273,
+       18.22039794921875,
+       14.677452087402344
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       1
+      ],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "LOW_WEIGHT:1",
+       "MISSING_READING:2",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 down-weighted, low reliability weight (0.18). Anchor 2 reading missing. Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 16.727,
+       "rssi_dbm": -64.2
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 6.112,
+       "rssi_dbm": -59.2
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.514,
+       "rssi_dbm": -54.6
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.576717376708984,
+       14.386367797851562
+      ],
+      "sigma": 0.7502307891845703,
+      "nlos_prob": [
+       0.25345274806022644,
+       0.035005006939172745,
+       0.011628203094005585,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.1028444692492485,
+       0.21435049176216125,
+       0.2634037137031555,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.47442626953125,
+       14.404141426086426,
+       19.363161087036133,
+       14.410882949829102,
+       19.265531539916992,
+       14.431455612182617,
+       19.169349670410156,
+       14.452646255493164,
+       19.079971313476562,
+       14.475106239318848,
+       18.99424171447754,
+       14.498919486999512,
+       18.897396087646484,
+       14.533345222473145,
+       18.83510398864746,
+       14.546030044555664,
+       18.757694244384766,
+       14.562554359436035,
+       18.660295486450195,
+       14.57646369934082
+      ],
+      "used_anchor_ids": [
+       1,
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.10). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.549,
+       "rssi_dbm": -54.1
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.583057403564453,
+       14.34881591796875
+      ],
+      "sigma": 0.6099026799201965,
+      "nlos_prob": [
+       0.0,
+       0.0,
+       0.012918350286781788,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.0,
+       0.13491889834403992,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.533916473388672,
+       14.33657169342041,
+       19.47711944580078,
+       14.35612964630127,
+       19.429567337036133,
+       14.378796577453613,
+       19.37820816040039,
+       14.406242370605469,
+       19.329721450805664,
+       14.425458908081055,
+       19.286685943603516,
+       14.446690559387207,
+       19.21477508544922,
+       14.476009368896484,
+       19.190425872802734,
+       14.496247291564941,
+       19.14083480834961,
+       14.50742244720459,
+       19.069040298461914,
+       14.514549255371094
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       2
+      ],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "MISSING_READING:1",
+       "LOW_WEIGHT:2",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 reading missing. Anchor 2 down-weighted, low reliability weight (0.13). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 17.12,
+       "rssi_dbm": -68.7
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 4.554,
+       "rssi_dbm": -53.9
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       20.031421661376953,
+       14.24891471862793
+      ],
+      "sigma": 0.8892481923103333,
+      "nlos_prob": [
+       0.33665362000465393,
+       0.0,
+       0.005693033803254366,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10199529677629471,
+       0.0,
+       0.2611651122570038,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       20.08664321899414,
+       14.245272636413574,
+       20.106616973876953,
+       14.284595489501953,
+       20.120668411254883,
+       14.338656425476074,
+       20.14756965637207,
+       14.376075744628906,
+       20.163896560668945,
+       14.422772407531738,
+       20.180431365966797,
+       14.45312786102295,
+       20.178325653076172,
+       14.491796493530273,
+       20.217618942260742,
+       14.501611709594727,
+       20.23219871520996,
+       14.515989303588867,
+       20.216833114624023,
+       14.532548904418945
+      ],
+      "used_anchor_ids": [
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "MISSING_READING:1",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.10). Anchor 1 reading missing. Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 17.287,
+       "rssi_dbm": -64.0
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 6.027,
+       "rssi_dbm": -59.8
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.336,
+       "rssi_dbm": -57.6
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.960599899291992,
+       14.63011646270752
+      ],
+      "sigma": 0.7469748854637146,
+      "nlos_prob": [
+       0.27901124954223633,
+       0.021068450063467026,
+       0.011137079447507858,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.11029790341854095,
+       0.2295084148645401,
+       0.26069071888923645,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       20.00796127319336,
+       14.638223648071289,
+       20.02298927307129,
+       14.68791675567627,
+       20.040794372558594,
+       14.739624977111816,
+       20.060075759887695,
+       14.775444030761719,
+       20.08568000793457,
+       14.816330909729004,
+       20.102590560913086,
+       14.84554386138916,
+       20.10523223876953,
+       14.883859634399414,
+       20.141775131225586,
+       14.897664070129395,
+       20.157320022583008,
+       14.914084434509277,
+       20.151689529418945,
+       14.922283172607422
+      ],
+      "used_anchor_ids": [
+       1,
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.11). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 17.01,
+       "rssi_dbm": -63.0
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 6.457,
+       "rssi_dbm": -56.8
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 4.642,
+       "rssi_dbm": -52.0
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       20.123779296875,
+       14.408199310302734
+      ],
+      "sigma": 0.7372376322746277,
+      "nlos_prob": [
+       0.246834397315979,
+       0.05579737201333046,
+       0.006407456938177347,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.09401760995388031,
+       0.2202145904302597,
+       0.25532230734825134,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       20.16297149658203,
+       14.463228225708008,
+       20.197729110717773,
+       14.499472618103027,
+       20.239107131958008,
+       14.542489051818848,
+       20.276611328125,
+       14.574555397033691,
+       20.320114135742188,
+       14.610244750976562,
+       20.358850479125977,
+       14.645989418029785,
+       20.38504409790039,
+       14.687328338623047,
+       20.443859100341797,
+       14.707578659057617,
+       20.477802276611328,
+       14.725570678710938,
+       20.487855911254883,
+       14.735642433166504
+      ],
+      "used_anchor_ids": [
+       1,
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.09). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 16.858,
+       "rssi_dbm": -64.3
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.326,
+       "rssi_dbm": -53.8
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.89133644104004,
+       14.424572944641113
+      ],
+      "sigma": 0.7720474004745483,
+      "nlos_prob": [
+       0.2289944738149643,
+       0.0,
+       0.02354496717453003,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.13784143328666687,
+       0.0,
+       0.33446452021598816,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.91885757446289,
+       14.436339378356934,
+       19.90924644470215,
+       14.471757888793945,
+       19.902700424194336,
+       14.513753890991211,
+       19.90143585205078,
+       14.538496017456055,
+       19.907878875732422,
+       14.571298599243164,
+       19.90291404724121,
+       14.601264953613281,
+       19.893892288208008,
+       14.634159088134766,
+       19.913721084594727,
+       14.640387535095215,
+       19.917888641357422,
+       14.657129287719727,
+       19.90119171142578,
+       14.661124229431152
+      ],
+      "used_anchor_ids": [
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "MISSING_READING:1",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.14). Anchor 1 reading missing. Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 17.284,
+       "rssi_dbm": -63.4
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 6.253,
+       "rssi_dbm": -56.0
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 5.432,
+       "rssi_dbm": -50.8
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.945640563964844,
+       14.596592903137207
+      ],
+      "sigma": 0.6779739260673523,
+      "nlos_prob": [
+       0.2936730980873108,
+       0.03845866024494171,
+       0.029798146337270737,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.07712773233652115,
+       0.21796581149101257,
+       0.23692306876182556,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.95929718017578,
+       14.60702133178711,
+       19.949743270874023,
+       14.639196395874023,
+       19.944162368774414,
+       14.675407409667969,
+       19.940101623535156,
+       14.698493003845215,
+       19.94291114807129,
+       14.730393409729004,
+       19.937747955322266,
+       14.756843566894531,
+       19.92490577697754,
+       14.786442756652832,
+       19.942846298217773,
+       14.798503875732422,
+       19.93834114074707,
+       14.814489364624023,
+       19.916955947875977,
+       14.822948455810547
+      ],
+      "used_anchor_ids": [
+       1,
+       2
+      ],
+      "downweighted_anchor_ids": [
+       0
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.08). Only 2 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       19.951740264892578,
+       14.660167694091797
+      ],
+      "sigma": 0.755736768245697,
+      "nlos_prob": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       19.94712257385254,
+       14.686149597167969,
+       19.957210540771484,
+       14.709210395812988,
+       19.96442222595215,
+       14.751830101013184,
+       19.953426361083984,
+       14.773077011108398,
+       19.973108291625977,
+       14.81657600402832,
+       19.959354400634766,
+       14.827293395996094,
+       19.962018966674805,
+       14.856789588928223,
+       19.969675064086914,
+       14.852099418640137,
+       19.967039108276367,
+       14.872614860534668,
+       19.95564079284668,
+       14.867918014526367
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "MISSING_READING:1",
+       "MISSING_READING:2",
+       "DEAD_RECKONING"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 reading missing. Anchor 2 reading missing. No valid anchor readings; position carried forward from motion history."
+     }
+    }
+   ]
+  },
+  {
+   "name": "all_anchors_dropped_steps_6_to_9",
+   "run_id": "hospital-dev-0003",
+   "venue": {
+    "width_m": 50.0,
+    "height_m": 30.0
+   },
+   "tolerance": 0.001,
+   "steps": [
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 32.731,
+       "rssi_dbm": -71.6
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 23.723,
+       "rssi_dbm": -62.3
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 14.662,
+       "rssi_dbm": -64.7
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 8.301,
+       "rssi_dbm": -62.6
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 12.228,
+       "rssi_dbm": -60.3
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 20.854,
+       "rssi_dbm": -63.4
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.68097686767578,
+       21.55679702758789
+      ],
+      "sigma": 1.8727591037750244,
+      "nlos_prob": [
+       0.302232950925827,
+       0.7215396761894226,
+       0.33962395787239075,
+       0.03766694292426109,
+       0.8327451944351196,
+       0.7602726817131042,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10284819453954697,
+       0.15207594633102417,
+       0.19800303876399994,
+       0.23198409378528595,
+       0.14787554740905762,
+       0.09708859771490097,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.70849609375,
+       21.52682113647461,
+       34.696346282958984,
+       21.546571731567383,
+       34.68474578857422,
+       21.582956314086914,
+       34.701053619384766,
+       21.611637115478516,
+       34.676979064941406,
+       21.605512619018555,
+       34.67344284057617,
+       21.618207931518555,
+       34.661643981933594,
+       21.59899139404297,
+       34.701881408691406,
+       21.59674072265625,
+       34.72404098510742,
+       21.576704025268555,
+       34.72953796386719,
+       21.557558059692383
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS",
+       "HIGH_UNCERTAINTY"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.10). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.72; measured range is 2.3 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.20). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.83; measured range is 2.2 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.76; measured range is 2.2 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history. Uncertainty is high (about 1.9 m)."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 33.793,
+       "rssi_dbm": -67.1
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 23.863,
+       "rssi_dbm": -69.9
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 15.552,
+       "rssi_dbm": -63.1
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 7.159,
+       "rssi_dbm": -59.6
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 12.568,
+       "rssi_dbm": -55.6
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 21.582,
+       "rssi_dbm": -68.1
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       35.32783126831055,
+       22.197490692138672
+      ],
+      "sigma": 1.403060793876648,
+      "nlos_prob": [
+       0.2831619083881378,
+       0.8348577618598938,
+       0.9051764607429504,
+       0.025450585409998894,
+       0.9276552200317383,
+       0.8807740211486816,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.06392509490251541,
+       0.08197842538356781,
+       0.09394765645265579,
+       0.1771763563156128,
+       0.06502024084329605,
+       0.06252827495336533,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       35.410552978515625,
+       22.133392333984375,
+       35.45664596557617,
+       22.153837203979492,
+       35.485313415527344,
+       22.16891098022461,
+       35.51089096069336,
+       22.173858642578125,
+       35.53012466430664,
+       22.160173416137695,
+       35.52449035644531,
+       22.1435546875,
+       35.52035903930664,
+       22.114768981933594,
+       35.518985748291016,
+       22.09373664855957,
+       35.523372650146484,
+       22.079776763916016,
+       35.512481689453125,
+       22.049156188964844
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "NLOS_SUSPECTED:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.83; measured range is 1.7 m longer than the distance to the estimate). Anchor 2 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 2.4 m longer than the distance to the estimate). Anchor 3 down-weighted, low reliability weight (0.18). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.93; measured range is 2.1 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.88; measured range is 2.7 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 24.529,
+       "rssi_dbm": -69.7
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 0.978,
+       "rssi_dbm": -55.1
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 10.344,
+       "rssi_dbm": -63.3
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 20.382,
+       "rssi_dbm": -64.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.29006576538086,
+       22.244258880615234
+      ],
+      "sigma": 1.4012720584869385,
+      "nlos_prob": [
+       0.0,
+       0.912608802318573,
+       0.0,
+       0.00028897455194965005,
+       0.28243932127952576,
+       0.8705337643623352,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.09173842519521713,
+       0.0,
+       0.019999999552965164,
+       0.15513908863067627,
+       0.0856165811419487,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.46791076660156,
+       22.23114013671875,
+       36.6688117980957,
+       22.270063400268555,
+       36.84990692138672,
+       22.306110382080078,
+       37.01952362060547,
+       22.334264755249023,
+       37.1566047668457,
+       22.327760696411133,
+       37.2916259765625,
+       22.325328826904297,
+       37.396697998046875,
+       22.30536651611328,
+       37.52752685546875,
+       22.313568115234375,
+       37.63245391845703,
+       22.286073684692383,
+       37.69956588745117,
+       22.255830764770508
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       1,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "NLOS_SUSPECTED:1",
+       "MISSING_READING:2",
+       "LOW_WEIGHT:3",
+       "LOW_WEIGHT:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 1.4 m longer than the distance to the estimate). Anchor 2 reading missing. Anchor 3 down-weighted, low reliability weight (0.02). Anchor 6 down-weighted, low reliability weight (0.16). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.87; measured range is 1.9 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 34.701,
+       "rssi_dbm": -66.3
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 26.221,
+       "rssi_dbm": -72.2
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 13.419,
+       "rssi_dbm": -58.7
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 5.799,
+       "rssi_dbm": -52.2
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 11.378,
+       "rssi_dbm": -61.2
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 19.835,
+       "rssi_dbm": -67.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.40128707885742,
+       22.24161148071289
+      ],
+      "sigma": 0.8990841507911682,
+      "nlos_prob": [
+       0.3034111559391022,
+       0.931594729423523,
+       0.2077716588973999,
+       0.013806618750095367,
+       0.6175243854522705,
+       0.834982693195343,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.07901015877723694,
+       0.049196045845746994,
+       0.15144704282283783,
+       0.21785999834537506,
+       0.10457391291856766,
+       0.0655655637383461,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.65791320800781,
+       22.192859649658203,
+       36.88051223754883,
+       22.19659996032715,
+       37.10261154174805,
+       22.193906784057617,
+       37.305198669433594,
+       22.181631088256836,
+       37.4872932434082,
+       22.17097282409668,
+       37.64425277709961,
+       22.14783477783203,
+       37.79447555541992,
+       22.121511459350586,
+       37.944580078125,
+       22.10426139831543,
+       38.06332015991211,
+       22.0806884765625,
+       38.16197204589844,
+       22.05474281311035
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.08). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.93; measured range is 3.0 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.15). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.62; measured range is 0.2 m shorter than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.83; measured range is 1.5 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 36.922,
+       "rssi_dbm": -70.6
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 24.423,
+       "rssi_dbm": -66.9
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 14.118,
+       "rssi_dbm": -62.4
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 6.164,
+       "rssi_dbm": -56.2
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 13.182,
+       "rssi_dbm": -59.8
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 21.978,
+       "rssi_dbm": -67.7
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.80344772338867,
+       22.657596588134766
+      ],
+      "sigma": 0.7898109555244446,
+      "nlos_prob": [
+       0.7814626097679138,
+       0.7468138337135315,
+       0.1890910118818283,
+       0.010788378305733204,
+       0.911982536315918,
+       0.9362084269523621,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.04022997245192528,
+       0.06453137844800949,
+       0.08800867199897766,
+       0.13778945803642273,
+       0.05368887260556221,
+       0.03963640704751015,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       37.10641860961914,
+       22.59096908569336,
+       37.37405776977539,
+       22.570077896118164,
+       37.635826110839844,
+       22.5557918548584,
+       37.87339782714844,
+       22.527585983276367,
+       38.095176696777344,
+       22.51185417175293,
+       38.28711700439453,
+       22.482751846313477,
+       38.472896575927734,
+       22.45366859436035,
+       38.64305877685547,
+       22.414274215698242,
+       38.78577423095703,
+       22.401084899902344,
+       38.90805435180664,
+       22.371286392211914
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "NLOS_SUSPECTED:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, likely obstructed (NLOS probability 0.78; measured range is 2.0 m longer than the distance to the estimate). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.75; measured range is 0.7 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.09). Anchor 3 down-weighted, low reliability weight (0.14). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 1.3 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.94; measured range is 3.4 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 33.051,
+       "rssi_dbm": -67.5
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 24.319,
+       "rssi_dbm": -68.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 12.258,
+       "rssi_dbm": -61.6
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 4.822,
+       "rssi_dbm": -55.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 10.577,
+       "rssi_dbm": -61.2
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 19.013,
+       "rssi_dbm": -65.5
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.13984680175781,
+       21.964609146118164
+      ],
+      "sigma": 0.9366328120231628,
+      "nlos_prob": [
+       0.20135356485843658,
+       0.7832408547401428,
+       0.1874340921640396,
+       0.006005542818456888,
+       0.41567185521125793,
+       0.7949822545051575,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.10647058486938477,
+       0.2391657680273056,
+       0.09903358668088913,
+       0.22401775419712067,
+       0.17905156314373016,
+       0.1668141931295395,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.29290771484375,
+       21.955886840820312,
+       36.412479400634766,
+       21.894620895385742,
+       36.546539306640625,
+       21.857967376708984,
+       36.65396499633789,
+       21.824228286743164,
+       36.76356506347656,
+       21.784526824951172,
+       36.86052322387695,
+       21.77082633972168,
+       36.94894027709961,
+       21.756593704223633,
+       37.034934997558594,
+       21.719160079956055,
+       37.11565017700195,
+       21.70125389099121,
+       37.16518020629883,
+       21.66792869567871
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.11). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.78; measured range is 1.4 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.10). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.42; measured range is 0.7 m shorter than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.79; measured range is 0.8 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.34526443481445,
+       21.893407821655273
+      ],
+      "sigma": 0.7838479280471802,
+      "nlos_prob": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.42867660522461,
+       21.868879318237305,
+       36.534507751464844,
+       21.795438766479492,
+       36.65386962890625,
+       21.754934310913086,
+       36.70877456665039,
+       21.72580337524414,
+       36.79944610595703,
+       21.705718994140625,
+       36.85442352294922,
+       21.669219970703125,
+       36.90465545654297,
+       21.652605056762695,
+       36.94727325439453,
+       21.597970962524414,
+       36.98269271850586,
+       21.59610366821289,
+       37.000972747802734,
+       21.555870056152344
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "MISSING_READING:1",
+       "MISSING_READING:2",
+       "MISSING_READING:3",
+       "MISSING_READING:6",
+       "MISSING_READING:7",
+       "DEAD_RECKONING"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 reading missing. Anchor 2 reading missing. Anchor 3 reading missing. Anchor 6 reading missing. Anchor 7 reading missing. No valid anchor readings; position carried forward from motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.425140380859375,
+       21.808744430541992
+      ],
+      "sigma": 0.9217453002929688,
+      "nlos_prob": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.46822738647461,
+       21.786376953125,
+       36.552520751953125,
+       21.688507080078125,
+       36.65316390991211,
+       21.636934280395508,
+       36.68271255493164,
+       21.602519989013672,
+       36.750850677490234,
+       21.574031829833984,
+       36.78144836425781,
+       21.53167724609375,
+       36.81441116333008,
+       21.516834259033203,
+       36.826412200927734,
+       21.45011329650879,
+       36.832759857177734,
+       21.4479923248291,
+       36.823978424072266,
+       21.394678115844727
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "MISSING_READING:1",
+       "MISSING_READING:2",
+       "MISSING_READING:3",
+       "MISSING_READING:6",
+       "MISSING_READING:7",
+       "DEAD_RECKONING"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 reading missing. Anchor 2 reading missing. Anchor 3 reading missing. Anchor 6 reading missing. Anchor 7 reading missing. No valid anchor readings; position carried forward from motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.46064376831055,
+       21.695655822753906
+      ],
+      "sigma": 1.1821954250335693,
+      "nlos_prob": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.48579788208008,
+       21.671022415161133,
+       36.552490234375,
+       21.551776885986328,
+       36.638999938964844,
+       21.48687171936035,
+       36.65220642089844,
+       21.44880485534668,
+       36.702579498291016,
+       21.40641975402832,
+       36.715965270996094,
+       21.361230850219727,
+       36.734413146972656,
+       21.34697151184082,
+       36.724369049072266,
+       21.273698806762695,
+       36.71339416503906,
+       21.272056579589844,
+       36.68227005004883,
+       21.202518463134766
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "MISSING_READING:1",
+       "MISSING_READING:2",
+       "MISSING_READING:3",
+       "MISSING_READING:6",
+       "MISSING_READING:7",
+       "DEAD_RECKONING"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 reading missing. Anchor 2 reading missing. Anchor 3 reading missing. Anchor 6 reading missing. Anchor 7 reading missing. No valid anchor readings; position carried forward from motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": null,
+       "rssi_dbm": null
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": null,
+       "rssi_dbm": null
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       36.502681732177734,
+       21.55565071105957
+      ],
+      "sigma": 1.4869253635406494,
+      "nlos_prob": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       36.5204963684082,
+       21.526456832885742,
+       36.57722473144531,
+       21.38929557800293,
+       36.65526580810547,
+       21.311080932617188,
+       36.660560607910156,
+       21.270496368408203,
+       36.69771194458008,
+       21.21511459350586,
+       36.700416564941406,
+       21.167438507080078,
+       36.70751953125,
+       21.152254104614258,
+       36.68342971801758,
+       21.078279495239258,
+       36.66404342651367,
+       21.077171325683594,
+       36.617210388183594,
+       20.993112564086914
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [],
+      "reason_codes": [
+       "MISSING_READING:0",
+       "MISSING_READING:1",
+       "MISSING_READING:2",
+       "MISSING_READING:3",
+       "MISSING_READING:6",
+       "MISSING_READING:7",
+       "DEAD_RECKONING",
+       "HIGH_UNCERTAINTY"
+      ],
+      "reason_text": "Anchor 0 reading missing. Anchor 1 reading missing. Anchor 2 reading missing. Anchor 3 reading missing. Anchor 6 reading missing. Anchor 7 reading missing. No valid anchor readings; position carried forward from motion history. Uncertainty is high (about 1.5 m)."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 30.821,
+       "rssi_dbm": -73.0
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 19.52,
+       "rssi_dbm": -66.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 9.208,
+       "rssi_dbm": -63.0
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.591,
+       "rssi_dbm": -38.8
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.479,
+       "rssi_dbm": -60.8
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.633,
+       "rssi_dbm": -65.3
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.37544250488281,
+       17.740449905395508
+      ],
+      "sigma": 3.1249961853027344,
+      "nlos_prob": [
+       0.23614847660064697,
+       0.37163299322128296,
+       0.25136899948120117,
+       0.0030594002455472946,
+       0.9860186576843262,
+       0.3243867754936218,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.06032426282763481,
+       0.10953489691019058,
+       0.03715290129184723,
+       0.36223676800727844,
+       0.34345299005508423,
+       0.25594717264175415,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.21784210205078,
+       17.826990127563477,
+       33.90655517578125,
+       17.645893096923828,
+       33.683197021484375,
+       17.554424285888672,
+       33.461639404296875,
+       17.527061462402344,
+       33.22626495361328,
+       17.441070556640625,
+       33.00756072998047,
+       17.44154167175293,
+       32.806365966796875,
+       17.466901779174805,
+       32.67431640625,
+       17.420265197753906,
+       32.53435134887695,
+       17.398571014404297,
+       32.35121154785156,
+       17.35541534423828
+      ],
+      "used_anchor_ids": [
+       3,
+       7
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "LOW_WEIGHT:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "FEW_ANCHORS",
+       "HIGH_UNCERTAINTY"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, low reliability weight (0.11). Anchor 2 down-weighted, low reliability weight (0.04). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.99; measured range is 3.2 m longer than the distance to the estimate). Only 2 trusted anchor(s); estimate relies partly on motion history. Uncertainty is high (about 3.1 m)."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 33.4,
+       "rssi_dbm": -71.3
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 22.511,
+       "rssi_dbm": -64.1
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 11.301,
+       "rssi_dbm": -62.4
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 0.462,
+       "rssi_dbm": -40.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 6.621,
+       "rssi_dbm": -57.7
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 17.077,
+       "rssi_dbm": -60.1
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.82583236694336,
+       19.018104553222656
+      ],
+      "sigma": 1.3119169473648071,
+      "nlos_prob": [
+       0.7353730797767639,
+       0.9438773393630981,
+       0.36996275186538696,
+       0.00011171080404892564,
+       0.04026256129145622,
+       0.8810572624206543,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.05007536709308624,
+       0.06086426600813866,
+       0.14553403854370117,
+       0.06806765496730804,
+       0.019999999552965164,
+       0.05128391087055206,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.68136215209961,
+       18.776901245117188,
+       34.44424819946289,
+       18.701011657714844,
+       34.238739013671875,
+       18.594676971435547,
+       34.03129959106445,
+       18.57025146484375,
+       33.805118560791016,
+       18.482465744018555,
+       33.598655700683594,
+       18.444738388061523,
+       33.34650421142578,
+       18.39678192138672,
+       33.188819885253906,
+       18.37099838256836,
+       32.99372863769531,
+       18.313905715942383,
+       32.79712677001953,
+       18.282987594604492
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "NLOS_SUSPECTED:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "LOW_WEIGHT:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, likely obstructed (NLOS probability 0.74; measured range is 1.2 m longer than the distance to the estimate). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.94; measured range is 1.5 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.15). Anchor 3 down-weighted, low reliability weight (0.07). Anchor 6 down-weighted, low reliability weight (0.02). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.88; measured range is 0.6 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 31.72,
+       "rssi_dbm": -67.6
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 22.108,
+       "rssi_dbm": -60.6
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 9.749,
+       "rssi_dbm": -58.8
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.393,
+       "rssi_dbm": -39.0
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.637,
+       "rssi_dbm": -63.1
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.826,
+       "rssi_dbm": -59.6
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.553382873535156,
+       17.269174575805664
+      ],
+      "sigma": 0.8693517446517944,
+      "nlos_prob": [
+       0.22846215963363647,
+       0.90694260597229,
+       0.06170637905597687,
+       0.001377919572405517,
+       0.9744757413864136,
+       0.5074900388717651,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.06383255124092102,
+       0.08912604302167892,
+       0.16615740954875946,
+       0.15338805317878723,
+       0.038279321044683456,
+       0.06514537334442139,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.292728424072266,
+       17.164827346801758,
+       33.97423553466797,
+       16.984508514404297,
+       33.71192932128906,
+       16.820093154907227,
+       33.412967681884766,
+       16.746665954589844,
+       33.11707305908203,
+       16.655590057373047,
+       32.835960388183594,
+       16.606855392456055,
+       32.53406524658203,
+       16.58439064025879,
+       32.28480529785156,
+       16.573347091674805,
+       31.998912811279297,
+       16.532360076904297,
+       31.71727752685547,
+       16.521995544433594
+      ],
+      "used_anchor_ids": [],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       3,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "LOW_WEIGHT:3",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.06). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.91; measured range is 1.5 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.17). Anchor 3 down-weighted, low reliability weight (0.15). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.97; measured range is 3.0 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.51; measured range is 0.5 m longer than the distance to the estimate). Only 0 trusted anchor(s); estimate relies partly on motion history."
+     }
+    },
+    {
+     "anchors": [
+      {
+       "anchor_id": 0,
+       "x_m": 3.0,
+       "y_m": 14.0,
+       "range_m": 32.187,
+       "rssi_dbm": -74.7
+      },
+      {
+       "anchor_id": 1,
+       "x_m": 14.0,
+       "y_m": 16.0,
+       "range_m": 21.005,
+       "rssi_dbm": -65.9
+      },
+      {
+       "anchor_id": 2,
+       "x_m": 25.0,
+       "y_m": 14.0,
+       "range_m": 9.661,
+       "rssi_dbm": -60.2
+      },
+      {
+       "anchor_id": 3,
+       "x_m": 36.0,
+       "y_m": 16.0,
+       "range_m": 1.92,
+       "rssi_dbm": -42.8
+      },
+      {
+       "anchor_id": 6,
+       "x_m": 25.0,
+       "y_m": 24.0,
+       "range_m": 14.781,
+       "rssi_dbm": -63.1
+      },
+      {
+       "anchor_id": 7,
+       "x_m": 45.0,
+       "y_m": 6.0,
+       "range_m": 15.049,
+       "rssi_dbm": -62.4
+      }
+     ],
+     "dt_s": 0.5,
+     "expected": {
+      "position": [
+       34.588565826416016,
+       15.97376823425293
+      ],
+      "sigma": 0.6061500310897827,
+      "nlos_prob": [
+       0.33970531821250916,
+       0.6543408632278442,
+       0.075624018907547,
+       0.0026602584403008223,
+       0.9681276082992554,
+       0.42078685760498047,
+       0.0,
+       0.0
+      ],
+      "weights": [
+       0.05302688106894493,
+       0.10843044519424438,
+       0.1732701063156128,
+       0.20368549227714539,
+       0.04112738370895386,
+       0.0674322172999382,
+       0.0,
+       0.0
+      ],
+      "forecast": [
+       34.334598541259766,
+       15.796478271484375,
+       34.045719146728516,
+       15.58246898651123,
+       33.78370666503906,
+       15.402113914489746,
+       33.4954948425293,
+       15.32139778137207,
+       33.201507568359375,
+       15.212780952453613,
+       32.91884231567383,
+       15.165192604064941,
+       32.60197830200195,
+       15.137348175048828,
+       32.327491760253906,
+       15.118404388427734,
+       32.01692199707031,
+       15.09233570098877,
+       31.705612182617188,
+       15.074987411499023
+      ],
+      "used_anchor_ids": [
+       3
+      ],
+      "downweighted_anchor_ids": [
+       0,
+       1,
+       2,
+       6,
+       7
+      ],
+      "reason_codes": [
+       "LOW_WEIGHT:0",
+       "NLOS_SUSPECTED:1",
+       "LOW_WEIGHT:2",
+       "NLOS_SUSPECTED:6",
+       "NLOS_SUSPECTED:7",
+       "FEW_ANCHORS"
+      ],
+      "reason_text": "Anchor 0 down-weighted, low reliability weight (0.05). Anchor 1 down-weighted, likely obstructed (NLOS probability 0.65; measured range is 0.4 m longer than the distance to the estimate). Anchor 2 down-weighted, low reliability weight (0.17). Anchor 6 down-weighted, likely obstructed (NLOS probability 0.97; measured range is 2.3 m longer than the distance to the estimate). Anchor 7 down-weighted, likely obstructed (NLOS probability 0.42; measured range is 0.6 m longer than the distance to the estimate). Only 1 trusted anchor(s); estimate relies partly on motion history."
+     }
+    }
+   ]
+  }
+ ]
+}

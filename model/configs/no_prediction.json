@@ -1,0 +1,1 @@
+{"name": "no_prediction", "use_prediction": false, "iters": 1200, "batch": 24, "chunk": 40, "lr": 0.002}

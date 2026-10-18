@@ -1,0 +1,9 @@
+{
+  "name": "traceline-model",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Workstream B: Traceline positioning model, ONNX export and browser inference wrapper",
+  "scripts": { "test": "node tests_js/test_infer.mjs" },
+  "devDependencies": { "onnxruntime-web": "1.30.0" }
+}

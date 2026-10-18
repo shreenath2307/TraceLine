@@ -1,0 +1,12 @@
+numpy
+pandas
+scipy
+scikit-learn
+torch>=2.1
+onnx
+onnxruntime
+onnxscript
+matplotlib
+pytest
+jsonschema
+ruff

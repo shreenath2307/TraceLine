@@ -1,0 +1,36 @@
+{
+ "environment": "python onnxruntime CPU (not a browser)",
+ "platform": "Linux-6.18.44-fc-v139-x86_64-with-glibc2.39",
+ "processor": "x86_64",
+ "ort_version": "1.29.0",
+ "model_size_bytes": 162677,
+ "cold_session_create_ms": 24.126407000039762,
+ "warm_steps": 2000,
+ "latency_ms": {
+  "median": 0.11306950000289362,
+  "p95": 0.16775959998085455,
+  "max": 1.5099729998837574
+ },
+ "targets": {
+  "size_bytes": 15728640,
+  "median_ms": 50,
+  "p95_ms": 100
+ },
+ "meets_targets": true,
+ "manifest": {
+  "seed": 0,
+  "config": {
+   "seed": 0,
+   "model": "model.onnx"
+  },
+  "config_hash": "86f4ba834caa10bb",
+  "library_versions": {
+   "python": "3.13.16",
+   "numpy": "2.5.3",
+   "pandas": "3.0.5",
+   "torch": "2.14.1+cu130"
+  },
+  "git_commit": "unknown",
+  "date": "2026-10-17T20:45:42+00:00"
+ }
+}

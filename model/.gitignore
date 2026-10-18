@@ -1,0 +1,8 @@
+data/
+models/
+node_modules/
+logs/
+__pycache__/
+.pytest_cache/
+.venv/
+*.pyc

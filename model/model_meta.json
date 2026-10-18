@@ -1,0 +1,124 @@
+{
+ "schema_version": "1.0",
+ "model_name": "default",
+ "onnx_opset": 17,
+ "max_anchor_slots": 8,
+ "slot_features": [
+  "x_m",
+  "y_m",
+  "range_m",
+  "rssi_dbm",
+  "valid_flag",
+  "crowd_path_density"
+ ],
+ "slot_order": "sorted by anchor_id, padded to 8 with valid_flag 0",
+ "enable_crowd_input": false,
+ "dt_s": 0.5,
+ "horizon_steps": 10,
+ "inputs": {
+  "slots": [
+   1,
+   8,
+   6
+  ],
+  "prev_pos": [
+   1,
+   2
+  ],
+  "prev_valid": [
+   1,
+   1
+  ],
+  "dt": [
+   1,
+   1
+  ],
+  "state": [
+   1,
+   64
+  ]
+ },
+ "outputs": [
+  "position",
+  "sigma",
+  "nlos_prob",
+  "weights",
+  "bias_est",
+  "forecast",
+  "state_out"
+ ],
+ "input_names": [
+  "slots",
+  "prev_pos",
+  "prev_valid",
+  "dt",
+  "state"
+ ],
+ "state": {
+  "shape": [
+   1,
+   64
+  ],
+  "reset": "At the start of every run set state to zeros and previous_position_valid to 0."
+ },
+ "normalization": {
+  "x": {
+   "mean": 22.88417701816575,
+   "std": 17.32620744432662
+  },
+  "y": {
+   "mean": 12.860116686583051,
+   "std": 8.264505053358675
+  },
+  "range": {
+   "mean": 20.204998564011927,
+   "std": 12.825512989845109
+  },
+  "rssi": {
+   "mean": -63.42022232710402,
+   "std": 7.595660047538509
+  },
+  "crowd": {
+   "mean": 0.3197643460731249,
+   "std": 0.5317826404098754
+  },
+  "source": "train split only (applied inside the ONNX graph)"
+ },
+ "invalid_slot_fill": "train mean (neutral); valid_flag=0 is authoritative",
+ "units": {
+  "position": "m",
+  "sigma": "m",
+  "range": "m",
+  "rssi": "dBm",
+  "dt": "s"
+ },
+ "sigma_semantics": "sigma_m is the per-axis standard deviation of an isotropic 2-D Gaussian trained with Gaussian NLL. Radial error is then roughly Rayleigh(sigma); nominal P(error <= k*sigma) = 1-exp(-k^2/2). It is only as good as the calibration reported in MODEL_CARD.md.",
+ "confidence_definition": "confidence = 1 / (1 + sigma_m). A monotone transform of sigma, NOT a probability.",
+ "explain_thresholds": {
+  "nlos_threshold": 0.39999999999999997,
+  "weight_threshold": 0.2,
+  "sigma_high_m": 1.48226797580719
+ },
+ "model_config": {
+  "name": "default",
+  "hidden": 64,
+  "enc": 48,
+  "use_nlos": true,
+  "use_temporal": true,
+  "use_crowd": false,
+  "use_prediction": true,
+  "horizon": 10,
+  "ridge": 0.05,
+  "delta_max_m": 4.0,
+  "iters": 1200,
+  "batch": 24,
+  "chunk": 40,
+  "lr": 0.002
+ },
+ "export_parity": {
+  "max_abs_diff_python_vs_onnx": 1.52587890625e-05,
+  "steps_checked": 120,
+  "tolerance": 0.001
+ },
+ "model_size_bytes": 162677
+}

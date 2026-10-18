@@ -1,0 +1,24 @@
+{
+ "seed": 0,
+ "config": {
+  "seed": 0,
+  "train_dir": "data/standin/train",
+  "dev_dir": "data/standin/dev",
+  "models": [
+   "crowd",
+   "default",
+   "no_nlos",
+   "no_prediction",
+   "no_temporal"
+  ]
+ },
+ "config_hash": "d53863db61bbe0c0",
+ "library_versions": {
+  "python": "3.13.16",
+  "numpy": "2.5.3",
+  "pandas": "3.0.5",
+  "torch": "2.14.1+cu130"
+ },
+ "git_commit": "unknown",
+ "date": "2026-10-17T20:45:34+00:00"
+}
