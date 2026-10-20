@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Activity } from "lucide-react";
+import Link from "./Link";
 
 const NAV_LINKS = [
   { path: "/", label: "Home" },
@@ -13,15 +13,18 @@ const NAV_LINKS = [
 ];
 
 export default function Navbar() {
-  const location = useLocation();
   const [mobileOpen, setMobileOpen] = useState(false);
+  const currentPath = typeof window !== "undefined" ? window.location.pathname.replace(/\/$/, "") || "/" : "/";
+  const currentHash = typeof window !== "undefined" ? window.location.hash : "";
 
   const isActive = (path) => {
     if (path.includes("#")) {
       const [base] = path.split("#");
-      return location.pathname === base && location.hash === "#contact";
+      const cleanBase = base.replace(/\/$/, "") || "/";
+      return (currentPath === cleanBase || currentPath === cleanBase + "/index.html") && currentHash === "#contact";
     }
-    return location.pathname === path && !location.hash;
+    const cleanPath = path.replace(/\/$/, "") || "/";
+    return (currentPath === cleanPath || currentPath === cleanPath + "/index.html") && !currentHash;
   };
 
   return (

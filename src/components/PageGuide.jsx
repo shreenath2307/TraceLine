@@ -1,5 +1,4 @@
 import React, { useState, useEffect, useRef, useCallback } from "react";
-import { useLocation } from "react-router-dom";
 import { Compass, X, ArrowLeft, ArrowRight, Check } from "lucide-react";
 
 const GUIDE_CONFIG = {
@@ -144,7 +143,7 @@ const GUIDE_CONFIG = {
 };
 
 export default function PageGuide() {
-  const { pathname } = useLocation();
+  const pathname = typeof window !== "undefined" ? (window.location.pathname.replace(/\/index\.html$/, "").replace(/\/$/, "") || "/") : "/";
   const [isOpen, setIsOpen] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const [spotlightRect, setSpotlightRect] = useState(null);

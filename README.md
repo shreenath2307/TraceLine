@@ -1,17 +1,22 @@
 # Traceline — AI Indoor Positioning for Sparse Infrastructure
 
-Modern React SPA engineered for sparse enterprise RTLS deployments with high-performance animations, spring physics, and real-time canvas positioning simulation.
+Modern Multi-Page React application engineered for sparse enterprise RTLS deployments with high-performance animations, spring physics, and real-time canvas positioning simulation.
 
 ## Tech Stack
-- **Framework**: [React 19](https://react.dev/) + [Vite 8](https://vite.dev/)
+- **Framework**: [React 19](https://react.dev/) + [Vite 8](https://vite.dev/) Multi-Page Application (MPA)
 - **Animation Engine**: [Framer Motion](https://www.framer.com/motion/) (spring physics, layout transitions, scroll triggers, presence state)
-- **Routing**: [React Router v7](https://reactrouter.com/) (smooth page transitions with `AnimatePresence`)
+- **Deployment**: [Vercel](https://vercel.com/) with static clean URLs for all routes
 - **Simulation**: High-FPS HTML5 Canvas mathematical Gauss-Newton trilateration engine
 - **Icons**: [Lucide React](https://lucide.dev/)
 - **Styling**: Modern dark-mode Glassmorphic CSS design system with HSL tailored signals
 
 ## Project Structure
-- `src/App.jsx` - Root application routing with animated route transitions
+- `index.html` - Home page entry (`/`)
+- `business/index.html` - Business analysis & market sizing entry (`/business`)
+- `pricing/index.html` - Deployment plans & hardware density estimator entry (`/pricing`)
+- `security/index.html` - Zero-trust data flow & DPDP Act compliance entry (`/security`)
+- `console/index.html` - Interactive positioning console & benchmark suite entry (`/console`)
+- `src/entries/` - Dedicated entry points for each page
 - `src/context/AnimationContext.jsx` - Global animation pause/resume controller
 - `src/components/` - Shared components:
   - `Navbar.jsx` - Frosted glass navigation with Framer Motion active pill

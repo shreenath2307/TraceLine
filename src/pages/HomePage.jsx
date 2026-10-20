@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import Link from "../components/Link";
 import { motion } from "framer-motion";
 import { ArrowRight, ShieldCheck, Cpu, Radio, Sparkles, Navigation, Layers, Compass, CheckCircle2 } from "lucide-react";
 

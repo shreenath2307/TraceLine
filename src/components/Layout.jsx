@@ -1,5 +1,4 @@
 import React, { useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
 import Background from "./Background";
@@ -7,7 +6,8 @@ import PauseButton from "./PauseButton";
 import PageGuide from "./PageGuide";
 
 export default function Layout({ children }) {
-  const { pathname, hash } = useLocation();
+  const pathname = typeof window !== "undefined" ? window.location.pathname.replace(/\/$/, "") || "/" : "/";
+  const hash = typeof window !== "undefined" ? window.location.hash : "";
 
   useEffect(() => {
     if (hash) {
@@ -29,7 +29,7 @@ export default function Layout({ children }) {
       </main>
       <Footer />
       <PauseButton />
-      {pathname !== "/" && <PageGuide />}
+      {pathname !== "/" && pathname !== "/index.html" && <PageGuide />}
     </>
   );
 }
